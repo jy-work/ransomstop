@@ -1,0 +1,127 @@
+.section_view {
+    .view_area {
+
+        .info {
+            padding: 20px 0;
+            border-bottom: 1px solid #666;
+
+            .type {
+                color: $theme_blue;
+                font-size: 14px;
+            }
+
+            .title {
+                display: block;
+                margin-top: 10px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            
+            .date {
+                margin-top: 10px;
+                font-size: 14px;
+                color: #999;
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0;
+            text-align: left;
+            font-size: 16px;
+            color: #444;
+            line-height: 24px;
+
+            p {
+                margin: 20px 0;
+
+                & + p {
+                    margin-top: 0;
+                }
+            }
+
+            img {
+                margin: auto;
+            }
+        }
+        
+        .content_link_area {
+            display: flex;
+            padding: 15px 20px;
+            border: 1px solid #333;
+            border-width: 1px 0;
+            font-size: 16px;
+
+            & + .content_link_area {
+                border-top: 0;
+            }
+
+            .type, .date {
+                flex: none;
+            }
+
+            .type {
+                color: $theme_blue;
+            }
+
+            .date {
+                margin-left: auto;
+                color: #666;
+            }
+
+            .content_link {
+                display: flex;
+                padding: 0 20px;
+                overflow: hidden;
+            }
+
+            .inner {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    
+    .link_area {
+        margin-top: 20px;
+        font-size: 0;
+
+        .link {
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            margin: 4px;
+            border: 1px solid #333;
+            color: #333;
+            font-size: 16px;
+            line-height: 40px;
+            vertical-align: top;
+            box-sizing: border-box;
+
+            &.colored {
+                color: #fff;
+                background-color: $theme_blue;
+                border: 0;
+            }
+        }
+    }
+}
+
+@include MobileSurface { 
+    .section_view {
+        .view_area .content_link_area {
+            padding: 10px;
+            font-size: 14px;
+
+            .date {
+                display: none;
+            }
+
+            .content_link {
+                padding-right: 0;
+            }
+        }
+    }
+}

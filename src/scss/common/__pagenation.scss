@@ -1,0 +1,97 @@
+.pagenation_area {
+    text-align: center;
+    margin-top: 40px;
+
+    .direction {
+        display: inline-block;
+        margin: 0 20px;
+
+        & > a {
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .first:before, .last:before, .pre:before, .next:before{
+            display: inline-block;
+            width: 12px;
+            height: 14px;
+            margin-top: 12px;
+            vertical-align: top;
+            content: '';
+        }
+
+        .first:before {
+            background: url('./../img/first.png') no-repeat;
+        }
+
+        .last:before {
+            background: url('./../img/last.png') no-repeat;
+        }
+
+        .pre:before {
+            width: 7px;
+            background: url('./../img/pre.png') no-repeat;
+        }
+
+        .next:before {
+            width: 7px;
+            background: url('./../img/next.png') no-repeat;
+        }
+    }
+
+    .direction > a, .num {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 40px;
+        vertical-align: top;
+    }
+
+    .num_area {
+        display: inline-block;
+
+        .num {
+            &.on {
+                background-color: $theme_blue;
+                color: #fff;
+            }
+        }
+    }
+
+    .page_area {
+        display: none;
+    }
+}
+
+@include Tablet {
+    .pagenation_area {
+        display: flex;
+        justify-content: space-between;
+
+        .direction {
+            margin: 0;
+        }
+
+        .num_area {
+            display: none;
+        }
+
+        .page_area {
+            display: inline-block;
+            font-size: 16px;
+            color: #999;
+            line-height: 40px;
+
+            .now {
+                font-weight: bold;
+                color: $theme_blue;
+            }
+        }
+    }
+}
+
+@include MobileSurface {
+
+}

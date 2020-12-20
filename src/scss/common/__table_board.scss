@@ -1,0 +1,96 @@
+.table_area {
+
+    table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        text-align: center;
+
+        thead {
+            background-color: $theme_light_gray;
+        }
+
+        th, td {
+            padding: 14px 10px;
+            border-bottom: 1px solid #666;
+            font-size: 16px;
+        }
+
+        tbody {
+            tr td:first-child {
+                width: 100px;
+                color: $theme_blue;
+            }
+        }
+
+        td .link {
+            display: block;
+            @include text-ellipsis;
+            text-align: left;
+
+            .em {
+                color: $theme_blue;
+            }
+        }
+
+        .select_area {
+            position: relative;
+
+            .board_type {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 180px;
+                height: 23px;
+                border: 0;
+                background: 0;
+                color: transparent;
+                text-align: center;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+    
+                option {
+                    color: #333;
+                    font-size: 16px;
+                }
+    
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .type_name {
+                font-weight: bold;
+
+                &:after {
+                    display: inline-block;
+                    margin-left: 8px;
+                    font-size: 6px;
+                    color: $theme_blue;
+                    vertical-align: top;
+                    line-height: 23px;
+                    content: '▼';
+                }
+            }
+        }
+
+        .new {
+            display: inline-block;
+            padding: 4px 8px;
+            background-color: $theme_blue;
+            color: #fff;
+            font-size: 12px;
+        }
+    }
+}
+
+@include MobileSurface {
+    .table_area {
+        table {
+            .board_type {
+                width: 130px;
+            }
+        }
+    }
+}

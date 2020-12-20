@@ -1,0 +1,146 @@
+/* footer */
+.footer {
+    background-color: $theme_red;
+    font-size: 15px;
+    color: #fff;
+
+    .inner {
+        overflow: hidden;
+        @include inner;
+        padding: 30px 40px;
+
+        &::before {
+            display: inline-block;
+            width: 224px;
+            height: 36px;
+            margin-right: 20px;
+            background: url('../img/company.png') no-repeat;
+            content: '';
+        }
+    }
+
+    .info {
+        display: inline-block;
+        width: 575px;
+        text-align: right;
+        line-height: 18px;
+
+        strong {
+            font-weight: bolder;
+        }
+
+        .address {
+            display: inline-block;
+            
+            &::before {
+                display: inline-block;
+                margin: 3px 8px 0;
+                width: 1px;
+                height: 12px;
+                background-color: #fff;
+                vertical-align: top;
+                content: '';
+            }
+        }
+        
+        .call {
+            display: inline-block;
+            margin-top: 4px;
+
+            span + span {
+                display: inline-block;
+                vertical-align: top;
+
+                &::before {
+                    display: inline-block;
+                    margin: 3px 8px 0;
+                    width: 1px;
+                    height: 12px;
+                    background-color: #fff;
+                    vertical-align: top;
+                    content: '';
+                }
+            }
+        }
+
+        .copy {
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+
+    .sns {
+        float: right;
+        a {
+            display: inline-block;
+            vertical-align: top;
+
+            & + a {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+@include Tablet {
+    .footer {
+        .inner {
+            width: auto;
+            
+            &::before {
+                display: block;
+            }
+        }
+
+        .info {
+            width: auto;
+            margin-top: 20px;
+            text-align: left;
+            
+            strong {
+                display: block;
+            }
+
+            .address {
+                font-size: 12px;
+
+                &::before {
+                    content: none;
+                }
+            }
+
+            .call {
+                display: block;
+                margin-top: 10px;
+                font-size: 12px;
+
+                span {
+                    display: block;
+                    
+                    & + span::before {
+                        content: none;
+                    }
+                }
+            }
+
+            .copy {
+                margin: 10px 0 0;
+                display: block;
+            }
+        }
+                    
+        .sns {
+            float: none;
+            text-align: right;
+            margin: -32px 0 0;
+        }
+    }
+}
+
+@include MobileSurface {
+    .footer {
+        .sns {
+            margin: 20px 0 0;
+        }
+    }
+}

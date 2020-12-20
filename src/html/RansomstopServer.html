@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>RansomStop | Server</title>
+        <link rel="shortcut icon" href="./../img/rs_favicon.ico">
+        <link rel="icon" href="./../img/rs_favicon.ico">
+        <link rel="stylesheet" href="./../css/reset.css">
+        <link rel="stylesheet" href="./../css/ramsomstop_style.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <header class="header">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="./home.html"><span class="blind">RansomStop</span></a>
+                    </h1>
+                    <!-- [D] 해상도 Tablet 이하 버전일 때 btn_gnb 클릭 시, <nav class="gnb"> 에 on 클래스 추가 -->
+                    <button type="button" class="btn_gnb"><span class="blind">메뉴</span></button>
+                    <nav class="gnb">
+                        <button type="button" class="btn_close"><span class="blind">닫기</span></button>
+                        <ul class="list_gnb">
+                            <li class="item_gnb">
+                                <a href="#" class="link_gnb">개인/소호용</a>
+                                <div class="wrap_list_sub">
+                                    <ul class="list_sub">
+                                        <li><a href="./RansomstopPro.html" class="sub_link">RansomStop Pro</a></li>
+                                        <li>
+                                            <a href="./RansomstopServer.html" class="sub_link">RansomStop for Server</a>
+                                        </li>
+                                        <li><a href="https://software.naver.com/software/summary.nhn?softwareId=GWS_003358%20%20" class="sub_link">평가판 다운로드</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="item_gnb">
+                                <a href="#" class="link_gnb">기업용</a>
+                                <div class="wrap_list_sub">
+                                    <ul class="list_sub">
+                                        <li><a href="./rsm.html" class="sub_link">RSM</a></li>
+                                        <li><a href="./eGenterprise.html" class="sub_link">eG Enterprise</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="item_gnb">
+                                <a href="#" class="link_gnb">랜섬웨어 연구소</a>
+                                <div class="wrap_list_sub">
+                                    <ul class="list_sub">
+                                        <li><a href="./rnd_news.html" class="sub_link">랜섬웨어 동향</a></li>
+                                        <li>
+                                            <span class="none_link">랜섬웨어 라이브러리</span>
+                                            <!-- <a href="./rnd_library.html" class="sub_link">랜섬웨어 라이브러리</a> -->
+                                        </li>
+                                        <li>
+                                            <span class="none_link">랜섬웨어 복구툴</span>
+                                            <!-- <a href="./rnd_decrypter.html" class="sub_link">랜섬웨어 복구툴</a> -->
+                                        </li>
+                                        <li>
+                                            <a href="#" class="sub_link">영상</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="sub_link">문서</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="item_gnb">
+                                <a href="#" class="link_gnb">고객지원</a>
+                                <div class="wrap_list_sub">
+                                    <ul class="list_sub">
+                                        <li><a href="./customer_notice.html" class="sub_link">공지사항</a></li>
+                                        <li><a href="./customer_faq.html" class="sub_link">FAQ</a></li>
+                                        <li>
+                                            <span class="none_link">온라인 문의</span>
+                                            <!-- <a href="#" class="sub_link">온라인 문의</a> -->
+                                        </li>
+                                        <li>
+                                            <span class="none_link">카카오톡 문의</span>
+                                            <!-- <a href="#" class="sub_link">카카오톡 문의</a> -->
+                                        </li>
+                                        <li>
+                                            <span class="none_link">다운로드</span>
+                                            <!-- <a href="#" class="sub_link">다운로드</a> -->
+                                        </li>
+                                        <li><a href="#" class="sub_link">제품문의/상담</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="item_gnb">
+                                <a href="#" class="link_gnb">노웨어소프트</a>
+                                <div class="wrap_list_sub">
+                                    <ul class="list_sub">
+                                        <li><a href="./Knowwheresoft.html#anchor_info" class="sub_link">회사소개</a></li>
+                                        <li><a href="./Knowwheresoft.html#anchor_history" class="sub_link">연혁</a></li>
+                                        <li>
+                                            <span class="none_link">고객사</span>
+                                            <!-- <a href="#" class="sub_link">고객사</a> -->
+                                        </li>
+                                        <li><a href="./Knowwheresoft.html#anchor_contact" class="sub_link">찾아오시는 길</a></li>
+                                        <li>
+                                            <span class="none_link">뉴스/보도자료</span>
+                                            <!-- <a href="#" class="sub_link">뉴스/보도자료</a> -->
+                                        </li>
+                                        <li><a href="#" class="sub_link">인재채용</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main class="main server">
+                <div class="banner_server">
+                    <div class="inner">
+                        <strong class="title">RansomStop 중앙관리콘솔</strong>
+                        <img src="./../img/server/logo_server.png" alt="RansomStop Server">
+                        <div class="wrap_link">
+                            <a href="#" class="link">제품 구매 문의</a>
+                        </div>
+                    </div>
+                </div>
+                <section class="section_info">
+                    <div class="section_inner">
+                        <h2 class="section_title">안티랜섬웨어 RansomStop</h2>
+                        <p class="section_desc">LWS기반의 휴리스틱 탐지기술은 일반 시그니처 보안으로 탐지하기 어려운 신·변종 랜섬웨어도 탐지 및 차단합니다.</p>
+                        <ul class="list_info">
+                            <li>
+                                <img src="./../img/pro/info_1.png" alt="썸네일">
+                                <div class="wrap_text">
+                                    <strong class="title_info">행위탐지 기반 엔드포인트 보안</strong>
+                                    <p class="desc_info">
+                                        사용자 PC환경에 맞는 엔드포인트 보안을 통해 사용자 PC 사용성 저하 없이 빠르게 탐지 및 방어합니다. 그리고 시그니처 기반 안티 랜섬웨어로는 차단하기 힘든 신·변종 랜섬웨어도 탐지 및 차단합니다.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./../img/pro/info_2.png" alt="썸네일">
+                                <div class="wrap_text">
+                                    <strong class="title_info">다중 계층 방어 엔진</strong>
+                                    <p class="desc_info">
+                                        사용자 PC환경에 맞는 엔드포인트 보안을 통해 사용자 PC 사용성 저하 없이 빠르게 탐지 및 방어합니다. 그리고 시그니처 기반 안티 랜섬웨어로는 차단하기 힘든 신·변종 랜섬웨어도 탐지 및 차단합니다.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./../img/pro/info_3.png" alt="썸네일">
+                                <div class="wrap_text">
+                                    <strong class="title_info">안전한 데이터 보호 및 관리</strong>
+                                    <p class="desc_info">
+                                        사용자 PC환경에 맞는 엔드포인트 보안을 통해 사용자 PC 사용성 저하 없이 빠르게 탐지 및 방어합니다. 그리고 시그니처 기반 안티 랜섬웨어로는 차단하기 힘든 신·변종 랜섬웨어도 탐지 및 차단합니다.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="section_process">
+                    <div class="section_inner">
+                        <h2 class="section_title">중앙관리서버 & RSM 연동</h2>
+                        <img src="./../img/server/process.jpg" alt="중앙관리서버 & RSM 연동 프로세스" class="img_process">
+                        <div class="wrap_process">
+                            <div class="wrap_item">
+                                <img src="./../img/server/agent.png" alt="썸네일">
+                                <strong class="name">에이전트</strong>
+                            </div>
+                            <div class="content_process">
+                                <span class="blind">에이전트에서 중앙관리서버로</span>
+                                <ul class="list_content">
+                                    <li>에이전트 로그 수집</li>
+                                    <li>랜섬웨어 탐지 및 격리 결과 수집</li>
+                                </ul>
+                                <img src="./../img/server/arrow.png" alt=" ">
+                                <span class="blind">중앙관리서버에서 에이전트로</span>
+                                <ul class="list_content">
+                                    <li>에이전트 업데이트 정보</li>
+                                    <li>그룹별 보안정책 업데이트</li>
+                                </ul>
+                            </div>
+                            <div class="wrap_item">
+                                <img src="./../img/server/server.png" alt="썸네일">
+                                <strong class="name">중앙관리서버</strong>
+                            </div>
+                            <div class="content_process">
+                                <span class="blind">중앙관리서버에서 관리콘솔로</span>
+                                <ul class="list_content">
+                                    <li>모니터링(알림, 상태)</li>
+                                    <li>통계 및 보고서</li>
+                                </ul>
+                                <img src="./../img/server/arrow.png" alt=" ">
+                                <span class="blind">관리콘솔에서 중앙관리서버로</span>
+                                <ul class="list_content">
+                                    <li>개인/그룹별 보안정책 명령</li>
+                                    <li>랜섬웨어 탐지 및 치료 결과</li>
+                                    <li>에이전트 관리</li>
+                                </ul>
+                            </div>
+                            <div class="wrap_item">
+                                <img src="./../img/server/control.png" alt="썸네일">
+                                <strong class="name">관리콘솔</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section_function">
+                    <div class="section_inner">
+                        <h2 class="section_title">주요 기능 및 특장점</h2>
+                        <p class="section_desc">안정적으로 정보자산 보호와 운용 편의성을 위한 다양한 기능을 제공합니다.</p>
+                        <ul class="list_function">
+                            <li class="em">
+                                <div class="wrap_text">
+                                    <strong class="name_function">LWS<span class="full">(Light Weight Signature)</span></strong>
+                                    <p class="desc_function">주요 프로세스에 대해 시그니처를 대조하여 쉽고 빠르게 탐지 및 진단하는 기술이며，서버 사용성 저하없이 빠르게 탐지 및 방어가 가능합니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="wrap_text">
+                                    <strong class="name_function">휴리스틱<span class="full">(Heuristics)</span> 보안</strong>
+                                    <p class="desc_function">실시간 행위 인식을 통한 휴리스틱 보안 방식은 시그니처 데이터 의존도가 높은 백신 프로그램으로 탐지하기 어려운 신·변종 랜섬웨어도 탐지 및 차단합니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="wrap_text">
+                                    <strong class="name_function">데이터 백업/복원</strong>
+                                    <p class="desc_function">실시간 행위 인식을 통한 휴리스틱 보안 방식은 시그니처 데이터 의존도가 높은 백신 프로그램으로 탐지하기 어려운 신·변종 랜섬웨어도 탐지 및 차단합니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="wrap_text">
+                                    <strong class="name_function">MBR<span class="full">(Master Boot Record)</span> 보호</strong>
+                                    <p class="desc_function">실시간 행위 인식을 통한 휴리스틱 보안 방식은 시그니처 데이터 의존도가 높은 백신 프로그램으로 탐지하기 어려운 신·변종 랜섬웨어도 탐지 및 차단합니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="wrap_text">
+                                    <strong class="name_function">스케줄 백업 기능</strong>
+                                    <p class="desc_function">사용자의 요성에 따라 수동으로 스케줄을 조정하여 백업을 할 수 있는 기능(파일확장자， 파일명 등 지정하여 해당 파일만 백업하는 기능)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="wrap_text">
+                                    <strong class="name_function">프로세서 관리</strong>
+                                    <p class="desc_function">실시간 행위 인식을 통한 휴리스틱 보안 방식은 시그니처 데이터 의존도가 높은 백신 프로그램으로 탐지하기 어려운 신·변종 랜섬웨어도 탐지 및 차단합니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="wrap_text">
+                                    <strong class="name_function">중앙관리 서버 연동</strong>
+                                    <p class="desc_function">여러 서버 에이전트 위협관리 및 보안운영이 가능한 RSM 연동 프로토콜 을 제공하여 효율적인 보안 유지 관리를 지원합니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="wrap_text">
+                                    <strong class="name_function">운영 안정성</strong>
+                                    <p class="desc_function">서버전용 어플라인언스 S/W 제공과 MBR 보호를 통해 운영 안정성을 제공합니다.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="section_view">
+                    <h2 class="section_title">제품 주요 화면</h2>
+                    <div class="view_area">
+                        <img src="./../img/tablet.png" alt="제품 주요 화면 이미지">
+                        <!-- [D] li 추가 시, 이미지 크기(443px) + 여백(90px) 값만큼 width값 추가
+                            left 값은 li의 수많큼 -553px씩 추가하고 차례로 on클래스 부여
+
+                            ex) li가 5개일 경우, (443px*5)+(90px*4) = 2575px; // 첫번째 li는 여백 없으므로 4개의 여백만 더하기
+                        -->
+                        <ul class="list_view_img" style=" width:2575px; left:0">
+                            <li>
+                                <img src="./../img/rsm/view_1.png" alt="제품 주요 화면 이미지1">
+                            </li>
+                            <li class="on">
+                                <img src="./../img/rsm/view_1.png" alt="제품 주요 화면 이미지1">
+                            </li>
+                            <li>
+                                <img src="./../img/rsm/view_1.png" alt="제품 주요 화면 이미지1">
+                            </li>
+                            <li>
+                                <img src="./../img/rsm/view_1.png" alt="제품 주요 화면 이미지1">
+                            </li>
+                            <li>
+                                <img src="./../img/rsm/view_1.png" alt="제품 주요 화면 이미지1">
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="section_specification">
+                    <div class="section_inner">
+                        <h2 class="section_title">사용 환경</h2>
+                        <p class="section_desc">RansomStop Server 설치를 위해 아래와 같은 사용 환경을 필요로 합니다.</p>
+                        <ul class="list_spec">
+                            <li class="item_spec">
+                                <strong class="type">OS</strong>
+                                <ul class="list_detail_spec">
+                                    <li>Microsoft Windows Server 2019 (64 비트)</li>
+                                    <li>Microsoft Windows Server 2016 (64 비트)</li>
+                                    <li>Microsoft Windows Server 2012 R2 Standard / Datacenter (64 비트)</li>
+                                    <li>Microsoft Windows MultiPoint Server 2012 Standard (64 비트)</li>
+                                    <li>Microsoft Windows Server 2012 Standard / Essentials / Foundation / Storage Server / Datacenter (64 비트)</li>
+                                    <li>Microsoft Windows SBS 2011 Standard / Essentials</li>
+                                    <li>Microsoft Windows 2008 Server R2 Web / Standard / Enterprise / Datacenter (64 비트)</li>
+                                    <li>Microsoft Windows 2008 Server Web / Standard / Enterprise (32 비트 / 64 비트) / Datacenter (64 비트)</li>
+                                    <li>Microsoft Windows Server 2003 R2 웹 / Standard / Enterprise / Datacenter</li>
+                                    <li>Microsoft Windows Server 2003 Web / Standard / Enterprise (32 비트 / 64 비트)</li>
+                                </ul>
+                                <p class="notice">
+                                    <strong>[주의사항]</strong>
+                                    Windows 2016 Server 및 Windows 2019 Server의 경우 RansomStop Server를 설치하기 전에 Windows Defender를 제거하십시오.<br>
+                                    콜라이언트를 Windows 2016 Server 또는 Windows 2019 Server로 업그레이드하는 경우 업그레이드 후 Windows Defender를 제거합니다.
+                                </p>
+                            </li>
+                            <li class="item_spec">
+                                <strong class="type">CPU</strong>
+                                <ul class="list_detail_spec">
+                                    <li>최소 : 1GHz 32 비트 (x86) 또는 64 비트 (x64) Intel Pentium</li>
+                                    <li>권장 : 2GHz 32 비트 (x86) 또는 64 비트 (x64) Intel Pentium 이상</li>
+                                </ul>
+                            </li>
+                            <li class="item_spec">
+                                <strong class="type">MEMORY</strong>
+                                <ul class="list_detail_spec">
+                                    <li>최소 : 2GB</li>
+                                    <li>권장 : 4GB 이상</li>
+                                </ul>
+                            </li>
+                            <li class="item_spec">
+                                <strong class="type">HDD</strong>
+                                <ul class="list_detail_spec">
+                                    <li>최소 : 4,800MB의 여유 디스크 공간</li>
+                                    <li>권장 : 10,000MB의 여유 디스크 공간</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <div class="service">
+                    <div class="inner">
+                        <img src="./../img/server/service.png" alt="제품 사진">
+                        <div class="wrap_info_service">
+                            <h2 class="title">기업형 제품 구매 및 상담</h2>
+                            <div class="wrap_info">
+                                <a href="#" class="link colored">상담 문의</a>
+                            </div>
+                            <div class="wrap_service">
+                                <a href="#" class="link_service">제품소개서</a>
+                                <a href="#" class="link_service">사용 메뉴얼</a>
+                                <a href="#" class="link_service">영상</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="inner">
+                    <div class="info">
+                        <strong>(주)노웨어소프트</strong>
+                        <address class="address">본사 (04784)서울특별시 성동구 성수이로 66 서울숲드림타워 #304</address>
+                        <address class="call">
+                            <span>전화번호: <a href="tel:+8207086338880">070-8633-8880</a></span>
+                            <span>팩스: 070-8668-8860</span>
+                        </address>
+                        <span class="copy">ⓒ2020 KnowWhereSoft</span>
+                    </div>
+                    <div class="sns">
+                        <a href="#">
+                            <img src="../img/kakao.png" alt="노웨어소프트 카카오 채널">
+                        </a>
+                        <a href="#">
+                            <img src="../img/blog.png" alt="노웨어소프트 블로그">
+                        </a>
+                        <a href="#">
+                            <img src="../img/youtube.png" alt="노웨어소프트 유튜브">
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../js/ui.js"></script>
+</html>

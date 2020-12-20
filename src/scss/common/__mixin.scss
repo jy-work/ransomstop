@@ -1,0 +1,49 @@
+@mixin Tablet {
+    @media all and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin MobileSurface {
+    @media all and (max-width: 560px) {
+        @content;
+    }
+}
+
+@mixin Mobile {
+    @media all and (max-width: 375px) {
+        @content;
+    }
+}
+
+@mixin MobileIphone5 {
+    @media all and (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin inner {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+@mixin full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@mixin clear {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+@mixin text-ellipsis {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}

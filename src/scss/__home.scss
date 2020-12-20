@@ -1,0 +1,844 @@
+@import "./common/_variable";
+
+.main {
+    padding-top: 72px;
+}
+/* banner_main */
+.banner_main {
+    overflow: hidden;
+    position: relative;
+    height: 450px;
+    background: url('../img/home/bg_banner.png') no-repeat center;
+    background-size: cover;
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .inner {
+        position: relative;
+        overflow: hidden;
+        @include inner;
+    }
+
+    .info_area {
+        position: relative;
+        margin-top: 90px;
+
+        .text,
+        .desc {
+            color: #fff;
+            line-height: 30px;
+        }
+
+        .desc {
+            margin-top: 45px;
+        }
+
+        .em {
+            display: block;
+            margin-top: 4px;
+            width: 326px;
+            height: 44px;
+            background: url('../img/home/ci.png') no-repeat;
+        }
+
+        .gs {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+
+            &::before {
+                display: block;
+                width: 444px;
+                height: 252px;
+                margin-bottom: 10px;
+                background: url('../img/home/gs.png') no-repeat;
+                content: '';
+            }
+        }
+
+        .list_link_wrap {
+            overflow: hidden;
+            margin-top: 60px;
+
+            li {
+                float: left;
+                
+                & + li {
+                    margin-left: 20px;;
+                }
+            }
+
+            li .link {
+                display: inline-block;
+                width: 220px;
+                height: 40px;
+                background-color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+                color: $theme_red;
+                text-align: center;
+                vertical-align: top;
+                line-height: 40px;
+            }
+
+            .link.colored {
+                background-color: $theme_red;
+                color: #fff;
+            }
+        }
+    }
+}
+
+/* 랜섬웨어 정의 */
+.section_definition {
+    padding-bottom: 30px;
+    background-color: #fff;
+    
+    .summary {
+        margin-top: 40px;
+
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        
+        .desc {
+            margin-top: 4px;
+            font-size: 20px;
+            font-weight: bold;
+
+            .em {
+                color: $theme_red;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .section_title {
+        margin-top: 30px;
+    }
+}
+
+/* 랜섬웨어의 공격 경로 */
+.section_attack_path {
+    background-color: $theme_light_gray;
+
+    .list_attack_path {
+        position: relative;
+        margin: 60px auto 0;
+        height: 390px;
+        
+        li {
+            position: relative;
+            display: inline-block;
+            width: 250px;
+            height: 250px;
+            padding: 25px 35px 0;
+            box-sizing: border-box;
+            margin: 0 0 0 -125px;
+            vertical-align: top;
+
+            &::before {
+                position: relative;
+                display: inline-block;
+                width: 42px;
+                height: 38px;
+                vertical-align: top;
+                content: '';
+                z-index: 1;
+            }
+
+            &::after {
+                @include full;
+                background: url("../img/home/square_blue.png") no-repeat;
+                background-size: cover;
+                content: '';
+            }
+
+            &:nth-child(2n) {
+                margin-top: 140px;
+
+                &::after {
+                    background-image: url("../img/home/square_red.png");
+                }
+            }
+
+            &:nth-child(1) {
+                margin-left: 0;
+
+                &::before {
+                    background: url('../img/home/path1.png') no-repeat;
+                }
+            }
+            
+            &:nth-child(2) {
+                &::before {
+                    background: url('../img/home/path2.png') no-repeat 3px 1px;
+                }
+            }
+
+            &:nth-child(3) {
+                &::before {
+                    background: url('../img/home/path3.png') no-repeat 14px 3px;
+                }
+            }
+
+            &:nth-child(4) {
+                &::before {
+                    background: url('../img/home/path4.png') no-repeat 2px 2px;
+                }
+            }
+
+            &:nth-child(5) {
+                &::before {
+                    background: url('../img/home/path5.png') no-repeat 4px 4px;
+                }
+            }
+
+            &:nth-child(6) {
+                &::before {
+                    background: url('../img/home/path6.png') no-repeat 1px 2px;
+                }
+            }
+
+            .title, .desc {
+                position: relative;
+                display: block;
+                color: #fff;
+                z-index: 1;
+            }
+
+            .title {
+                margin-top: 6px;
+                font-weight: bold;
+            }
+
+            .desc {
+                margin-top: 4px;
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+}
+
+/* 랜섬웨어 공격 7 STEPS */
+.section_attack_7steps {
+    position: relative;
+    padding-bottom: 100px;
+    background-color: $theme_dark_blue;
+    color: #fff;
+    z-index: 1;
+
+    .section_title, .section_desc {
+        color: #fff;
+    }
+
+   .svg_area {
+        min-width: 1080px;
+        height: 150px;
+        background-color: #f7f7f7;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    .list_steps {
+        margin-top: 100px;
+        
+        .item_steps {
+            position: relative;
+            display: flex;
+            background-color: #fff;
+            border: 6px solid $theme_blue;
+            min-height: 54px;
+            color: #333;
+
+            & + .item_steps {
+                margin-top: 60px;
+            }
+
+            &::before {
+                position: absolute;
+                top: -60px;
+                left: 0;
+                font-size: 60px;
+                font-weight: bolder;
+                font-family: Arial, Helvetica, sans-serif;
+                color: $theme_blue;
+            }
+
+            &:nth-child(1)::before {
+                content: "01";
+            }
+
+            &:nth-child(2)::before {
+                content: "02";
+            }
+
+            &:nth-child(3)::before {
+                content: "03";
+            }
+
+            &:nth-child(4)::before {
+                content: "04";
+            }
+
+            &:nth-child(5)::before {
+                content: "05";
+            }
+
+            &:nth-child(6)::before {
+                content: "06";
+            }
+
+            &:nth-child(7)::before {
+                content: "07";
+            }
+
+            &::after {
+                position: absolute;
+                bottom: -36px;
+                transform: translateX(-50%);
+                left: 50%;
+                width: 62px;
+                height: 32px;
+                background: url('../img/home/arrow_step.png') no-repeat;
+                content: '';
+            }
+
+            &:last-child::after {
+                content: none;
+            }
+        }
+
+        .title {
+            position: absolute;
+            top: 15px;
+            left: 56px;
+            font-size: 22px;
+            font-weight: bold;
+            color: $theme_red;
+            line-height: 24px;
+        }
+
+        .desc {
+            margin: auto;
+            padding: 0 160px 0 210px;
+            font-size: 18px;
+        }
+    }
+}
+
+/* 랜섬웨어 예방 및 차단 */
+.section_protect {
+    background: url('../img/home/bg_protect.png') no-repeat center;
+    background-size: cover;
+
+    .list_protect {
+        overflow: hidden;
+        margin-top: 30px;
+
+        .item_protect {
+            display: inline-block;
+            width: 190px;
+            height: 230px;
+            background-color: #fff;
+            border-radius: 20px;
+            border: 6px solid $theme_blue;
+            font-size: 18px;
+            font-weight: bold;
+            color: $theme_red;
+            line-height: 24px;
+            letter-spacing: -0.5px;
+    
+            &::before {
+                display: block;
+                margin: 38px auto 32px;
+                width: 106px;
+                height: 78px;
+                content: '';
+            }
+
+            &:nth-child(1)::before {
+                background: url('../img/home/protect1.png') no-repeat;
+                background-position: 0 4px;
+
+            }
+
+            &:nth-child(2)::before {
+                background: url('../img/home/protect2.png') no-repeat;
+                background-position: 13px 4px;
+            }
+
+            &:nth-child(3)::before {
+                background: url('../img/home/protect3.png') no-repeat;
+                background-position: 4px 0;
+            }
+    
+            & + .item_protect {
+                margin-left: 60px;
+            }
+        }
+    }
+    
+}
+
+/* 노웨어소프트 안티랜섬웨어 */
+.section_product {
+    .wrap_product {
+        margin-top: 60px;
+
+        .type_product {
+            display: inline-block;
+            width: 460px;
+            vertical-align: top;
+
+            & + .type_product {
+                margin-left: 44px;
+            }
+
+            .type_name {
+                font-weight: bolder;
+                color: $theme_red;
+            }
+
+        }
+
+        .box_product {
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            text-align: left;
+
+            .title {
+                display: block;
+                padding: 20px 40px 0;
+                color: $theme_blue;
+            }
+
+            .list_product {
+                padding: 8px 40px 0;
+
+                li {
+                    display: block;
+                    margin-top: 4px;
+                    line-height: 24px;
+
+                    &::before {
+                        display: inline-block;
+                        margin: 9px 8px 0 0;
+                        width: 5px;
+                        height: 5px;
+                        background-color: #333;
+                        border-radius: 50%;
+                        vertical-align: top;
+                        content: '';
+                    }
+                }
+            }
+
+            .info {
+                padding: 4px 40px 0;
+                height: 54px;
+                color: #999;
+                line-height: 27px;
+            }
+            
+            .link {
+                display: block;
+                margin: 16px auto 20px;
+                width: 144px;
+                height: 36px;
+                background-color: $theme_blue;
+                font-size: 16px;
+                font-weight: bold;
+                color: #fff;
+                text-align: center;
+                line-height: 36px;
+            }
+
+            &::before {
+                display: block;
+                height: 250px;
+                background: #f7f7f7 url('../img/home/software1.png') no-repeat;
+                background-size: contain;
+                content: '';
+            }
+        }
+
+        .type_product:last-of-type .box_product::before {
+            background-image: url('../img/home/software2.png');
+        }
+    }
+}
+
+/* 문의 및 구매 상담 */
+.section_support {
+    background-color: #585858;
+
+    .section_title, .section_desc {
+        color: #fff;
+    }
+
+    .link {
+        display: block;
+        margin: 30px auto 0;
+        width: 250px;
+        height: 50px;
+        background-color: $theme_red;
+        border-radius: 25px;
+        font-size: 16px;
+        color: #fff;
+        line-height: 50px;
+    }
+}
+
+/* Tablet Style */
+@include Tablet {
+    .main {
+        padding-top: 68px;
+    }
+
+    .banner_main {
+        padding: 40px 0;
+        height: auto;
+
+        .inner {
+            width: auto;
+        }
+
+        .info_area {
+            margin-top: 0;
+
+            .gs {
+                position: static;
+                display: block;
+                margin-top: 8px;
+                font-size: 12px;
+
+                &:before {
+                    margin: 0 auto 4px;
+                    width: 222px;
+                    height: 126px;
+                    background-size: 222px 126px;
+                }
+            }
+
+            .desc {
+                margin-top: 20px;
+                font-size: 16px;
+                line-height: 22px;
+            }
+
+            .list_link_wrap {
+                margin: 20px 0 0;
+                display: flex;
+
+                li {
+                    float: none;
+                    flex-basis: 50%;
+                    
+                    .link {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .section_definition {
+        .summary {
+            .title {
+                font-size: 26px;
+            }
+
+            .desc {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .section_attack_path {
+        .list_attack_path {
+            width: 465px;
+            height: auto;
+            padding-bottom: 150px;
+
+            li {
+                display: block;
+                width: 300px;
+                height: 300px;
+                margin: 0 0 -140px 0;
+                padding: 50px 50px 0;
+                box-sizing: border-box;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                &:nth-child(2n) {
+                    margin: 0 0 -140px 164px;
+                }
+
+                .desc {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    .section_attack_7steps  {
+        font-size: 16px;
+
+        .section_title {
+            margin-top: 0;
+        }
+
+        .list_steps {
+            margin-top: 60px;
+            .title {
+                top: 50%;
+                transform: translateY(-50%);
+                left: 19px;
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            .desc {
+                margin: auto 0;
+                padding: 0 20px 0 110px;
+                font-size: 14px;
+                text-align: left;
+                line-height: 18px;
+            }
+
+            .item_steps {
+                padding: 4px 0;
+
+                &::before {
+                    font-size: 40px;
+                    top: -40px;
+                }
+
+                &::after {
+                    bottom: -30px;
+                    width: 48px;
+                    height: 25px;
+                    background-size: cover;
+                }
+
+                & + .item_steps {
+                    margin-top: 42px;
+                }
+            }
+        }
+    }
+
+    .section_protect {
+        .list_protect {
+            display: flex;
+            margin: 10px -10px 0;
+
+            .item_protect {
+                flex-basis: 33.33%;
+                min-height: 180px;
+                height: auto;
+                margin-top: 10px;
+                padding: 10px;
+                font-size: 14px;
+                line-height: 18px;
+
+                &::before {
+                    margin: 18px auto 20px;
+                }
+
+                & + .item_protect {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    .section_product {
+        .wrap_product {
+            margin-top: 30px;
+
+            .type_product {
+                width: 100%;
+
+                & + .type_product {
+                    margin: 30px 0 0 0;
+                }
+            }
+
+            .box_product {
+                position: relative;
+                padding: 55.55% 20px 10px;
+                font-size: 16px;
+
+                &::before {
+                    @include full;
+                    bottom: auto;
+                    padding-top: 55.55%;
+                    height: auto;
+                }
+
+                .title {
+                    padding: 10px 0 0;
+                    font-size: 20px;
+                }
+
+                .list_product {
+                    padding: 8px 0 0;
+                }
+
+                .info {
+                    padding: 4px 0 0;
+                    height: auto;
+                }
+
+                .link {
+                    margin: 8px 0 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include MobileSurface {
+    .banner_main {
+        .inner {
+            padding: 0 20px;
+        }
+
+        .info_area {
+            text-align: center;
+            
+            .em {
+                padding-top: 13.49%;
+                width: auto;
+                height: auto;
+                margin: 4px 5% 0;
+                background-size: contain;
+            }
+
+            .list_link_wrap {
+                flex-direction: column;
+                
+                li {
+                    flex: 1;
+
+                    & + li {
+                        margin: 10px 0 0 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .section_attack_path  {
+        .section_inner {
+            .list_attack_path {
+                width: auto;
+                padding: 0;
+
+                li {
+                    margin: 0;
+                    padding: 20px 10px;
+                    width: auto;
+                    height: auto;
+                    border-radius: 10px;
+                    background-color: $theme_blue;
+    
+                    &::after {
+                        background: 0;
+                    }
+    
+                    &:nth-child(2n) {
+                        background-color: $theme_red;
+                    }
+
+                    & + li {
+                        margin-top: 10px;
+                    }
+
+                    .title {
+                        font-size: 18px;
+                    }
+
+                    .desc {
+                        font-size: 14px;
+                    }
+                }
+            } 
+        }
+    }
+
+    .section_attack_7steps  {
+        .list_steps {
+            .title { 
+                left: 0;
+                font-size: 15px;
+                width: 80px;
+                text-align: center;
+            }
+            .desc {
+                padding: 0 10px 0 80px;
+            }
+        }
+    }
+
+    .section_protect  {
+        .list_protect {
+            flex-direction: column;
+            margin: 10px 0 0 0;
+
+            .item_protect {
+                margin-top: 10px;
+                flex: 1;
+                width: auto;
+                min-height: auto;
+
+                &::before {
+                    margin: 0 auto;
+                }
+
+                & + .item_protect {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    .section_support {
+        .link {
+            width: auto;
+        }
+    }
+}
+
+@include Mobile {
+    .banner_main {
+        .info_area {
+            .em {
+                width: auto;
+                height: auto;
+                padding-top: 13.39%;
+                box-sizing: border-box;
+                background-size: contain;
+            }
+        }
+    }
+}
