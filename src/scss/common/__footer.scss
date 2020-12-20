@@ -7,14 +7,16 @@
     .inner {
         overflow: hidden;
         @include inner;
-        padding: 30px 40px;
+        padding: 36px 40px;
 
         &::before {
             display: inline-block;
-            width: 224px;
-            height: 36px;
-            margin-right: 20px;
+            width: 240px;
+            height: 63px;
+            margin: -18px 20px 0 0;
             background: url('../img/company.png') no-repeat;
+            background-size: contain;
+            vertical-align: top;
             content: '';
         }
     }
@@ -89,6 +91,8 @@
             
             &::before {
                 display: block;
+                width: 100%;
+                margin: 0;
             }
         }
 
