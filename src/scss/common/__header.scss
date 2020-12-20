@@ -108,6 +108,25 @@
                                     font-size: 16px;
                                 }
 
+                                li.link_banner {
+                                    position: absolute;
+                                    top: 0;
+                                    right: 40px;
+                                    
+                                    a {
+                                        display: block;
+                                    }
+
+                                    a img {
+                                        vertical-align: top;
+                                    }
+                                }
+
+                                li.link_banner.recruit {
+                                    top: 26px;
+                                    right: 110px;
+                                }
+
                                 .none_link {
                                     color: #aaa;
                                 }

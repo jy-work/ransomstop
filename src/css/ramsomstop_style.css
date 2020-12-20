@@ -101,6 +101,21 @@
   margin-bottom: 12px;
   font-size: 16px;
 }
+.header .gnb .list_gnb .item_gnb .link_gnb.on + .wrap_list_sub .list_sub li.link_banner {
+  position: absolute;
+  top: 0;
+  right: 40px;
+}
+.header .gnb .list_gnb .item_gnb .link_gnb.on + .wrap_list_sub .list_sub li.link_banner a {
+  display: block;
+}
+.header .gnb .list_gnb .item_gnb .link_gnb.on + .wrap_list_sub .list_sub li.link_banner a img {
+  vertical-align: top;
+}
+.header .gnb .list_gnb .item_gnb .link_gnb.on + .wrap_list_sub .list_sub li.link_banner.recruit {
+  top: 26px;
+  right: 110px;
+}
 .header .gnb .list_gnb .item_gnb .link_gnb.on + .wrap_list_sub .list_sub .none_link {
   color: #aaa;
 }
