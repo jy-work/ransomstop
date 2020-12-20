@@ -54,6 +54,10 @@ main.server {
                 padding: 0 12px;
             }
 
+            li img {
+                width: 120px;
+            }
+
             .wrap_text {
                 margin-top: 20px;
             }
@@ -109,27 +113,44 @@ main.server {
                 vertical-align: top;
                 box-sizing: border-box;
 
-                &::before {
+                &:before {
                     display: inline-block;
                     width: 120px;
                     height: 120px;
-                    background-color: $theme_blue;
+                    background: $theme_blue url("./../img/server/func_item1.png") center no-repeat;
                     border-radius: 50%;
                     vertical-align: top;
+                    background-size: 55% auto;
                     content: '';
                 }
+            }
+            
+            li:nth-child(2):before {
+                background-image: url("./../img/server/func_item2.png");
+            }
 
-                &.em {
-                    .name_function {
-                        color: $theme_red;
-                    }
+            li:nth-child(3):before {
+                background-image: url("./../img/server/func_item3.png");
+            }
 
-                    &::before {
-                        border: 4px solid $theme_blue;
-                        background-color: #fff;
-                        box-sizing: border-box;
-                    }
-                }
+            li:nth-child(4):before {
+                background-image: url("./../img/server/func_item4.png");
+            }
+
+            li:nth-child(5):before {
+                background-image: url("./../img/server/func_item5.png");
+            }
+
+            li:nth-child(6):before {
+                background-image: url("./../img/server/func_item6.png");
+            }
+                
+            li:nth-child(7):before {
+                background-image: url("./../img/server/func_item7.png");
+            }
+
+            li:nth-child(8):before {
+                background-image: url("./../img/server/func_item8.png");
             }
 
             .wrap_text {
@@ -194,7 +215,7 @@ main.server {
                 }
             }
 
-            &::after{ 
+            &:after{ 
                 @include clear;
             }
         }
@@ -246,7 +267,7 @@ main.server {
                     padding-left: 12px;
                     line-height: 26px;
 
-                    &::before {
+                    &:before {
                         position: absolute;
                         top: 11px;
                         left: 0;
@@ -349,7 +370,7 @@ main.server {
                     line-height: 24px;
 
                     li {
-                        &::before {
+                        &:before {
                             display: block;
                             width: 4px;
                             height: 4px;
@@ -360,7 +381,7 @@ main.server {
                         }
                         
                         &:first-child {
-                            &::before {
+                            &:before {
                                 content: none;
                             }
                         }
@@ -406,6 +427,11 @@ main.server {
 
         .section_info {
             .list_info {
+                
+                .wrap_text {
+                    padding: 10px 0 0 0;
+                }
+
                 img {
                     float: none;
                 }
@@ -427,7 +453,7 @@ main.server {
                     li {
                         font-size: 14px; 
                         
-                        &::before {
+                        &:before {
                             margin: 2px auto;
                         }
                     }
@@ -450,7 +476,7 @@ main.server {
         .section_function {
             .list_function {
 
-                &::after {
+                &:after {
                     @include clear;
                 }
 
@@ -459,7 +485,7 @@ main.server {
                     width: auto;
                     padding: 15px 0;
 
-                    &::before {
+                    &:before {
                         flex-shrink: 0;
                     }
 
@@ -496,7 +522,7 @@ main.server {
                     li {
                         line-height: 22px;
 
-                        &::before {
+                        &:before {
                             top: 9px;
                         }
                     }

@@ -167,7 +167,7 @@ main.pro {
                 vertical-align: top;
                 box-sizing: border-box;
 
-                &::before {
+                &:before {
                     display: inline-block;
                     width: 120px;
                     height: 120px;
@@ -182,7 +182,7 @@ main.pro {
                         color: $theme_red;
                     }
 
-                    &::before {
+                    &:before {
                         border: 4px solid $theme_blue;
                         background-color: #fff;
                         box-sizing: border-box;
@@ -252,7 +252,7 @@ main.pro {
                 }
             }
 
-            &::after{ 
+            &:after{ 
                 @include clear;
             }
         }
@@ -292,7 +292,7 @@ main.pro {
                     padding-left: 12px;
                     line-height: 26px;
 
-                    &::before {
+                    &:before {
                         position: absolute;
                         top: 11px;
                         left: 0;
@@ -438,7 +438,7 @@ main.pro {
         .section_function {
             .list_function {
 
-                &::after {
+                &:after {
                     @include clear;
                 }
 
@@ -447,7 +447,7 @@ main.pro {
                     width: auto;
                     padding: 15px 0;
 
-                    &::before {
+                    &:before {
                         flex-shrink: 0;
                     }
 
@@ -511,7 +511,7 @@ main.pro {
         .section_function {
             .list_function {
 
-                &::after {
+                &:after {
                     @include clear;
                 }
 
@@ -520,7 +520,7 @@ main.pro {
                     width: auto;
                     padding: 15px 0;
 
-                    &::before {
+                    &:before {
                         flex-shrink: 0;
                     }
 
@@ -550,7 +550,7 @@ main.pro {
                     li {
                         line-height: 22px;
 
-                        &::before {
+                        &:before {
                             top: 9px;
                         }
                     }

@@ -11,7 +11,7 @@
     z-index: 1000;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);
 
-    &::after {
+    &:after {
         @include clear;
     }
 
@@ -19,7 +19,7 @@
         position: relative;
         @include inner;
 
-        &::after {
+        &:after {
             @include clear;
         }
     }
@@ -49,7 +49,7 @@
             font-size: 20px;
             line-height: 20px;
 
-            &::after {
+            &:after {
                 @include clear;
             }
 
@@ -66,7 +66,7 @@
                     font-size: 16px;
                     line-height: 18px;
 
-                    &::after {
+                    &:after {
                         display: inline-block;
                         width: 14px;
                         height: 8px;
@@ -78,7 +78,7 @@
                     }
 
                     &.on {
-                        &::after {
+                        &:after {
                             transform: rotate(180deg);
                         }
                     }
@@ -197,7 +197,7 @@
             &.on {
                 display: block;
 
-                &::before {
+                &:before {
                     position: fixed;
                     top: 0;
                     left: 0;
@@ -226,7 +226,7 @@
                         font-weight: bold;
                         line-height: 52px;
 
-                        &::after {
+                        &:after {
                             display: none;
                         }
                     }

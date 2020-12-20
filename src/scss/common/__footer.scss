@@ -9,7 +9,7 @@
         @include inner;
         padding: 36px 40px;
 
-        &::before {
+        &:before {
             display: inline-block;
             width: 240px;
             height: 63px;
@@ -34,7 +34,7 @@
         .address {
             display: inline-block;
             
-            &::before {
+            &:before {
                 display: inline-block;
                 margin: 3px 8px 0;
                 width: 1px;
@@ -53,7 +53,7 @@
                 display: inline-block;
                 vertical-align: top;
 
-                &::before {
+                &:before {
                     display: inline-block;
                     margin: 3px 8px 0;
                     width: 1px;
@@ -89,7 +89,7 @@
         .inner {
             width: auto;
             
-            &::before {
+            &:before {
                 display: block;
                 width: 100%;
                 margin: 0;
@@ -108,7 +108,7 @@
             .address {
                 font-size: 12px;
 
-                &::before {
+                &:before {
                     content: none;
                 }
             }
@@ -121,7 +121,7 @@
                 span {
                     display: block;
                     
-                    & + span::before {
+                    & + span:before {
                         content: none;
                     }
                 }
