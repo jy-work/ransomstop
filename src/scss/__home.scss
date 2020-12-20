@@ -23,11 +23,25 @@
         position: relative;
         overflow: hidden;
         @include inner;
+        height: 100%;
     }
 
     .info_area {
         position: relative;
         margin-top: 90px;
+        overflow: hidden;
+        height: 100%;
+
+        .list_slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .item_slide {
+            float: left;
+            position: relative;
+        }
 
         .text,
         .desc {
@@ -514,6 +528,7 @@
 
         .inner {
             width: auto;
+            height: 360px;
         }
 
         .info_area {
@@ -720,6 +735,7 @@
     .banner_main {
         .inner {
             padding: 0 20px;
+            height: 450px;
         }
 
         .info_area {

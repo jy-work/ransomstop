@@ -23,12 +23,101 @@ $(document).ready(function(){
         $(gnb).removeClass("on");
     });
 
+    var windowWidth = $( window ).width();
     $( window ).resize(function() {
-        var windowWidth = $( window ).width();
         if(windowWidth < 768) {
             $(nav_item).removeClass("on");
         }
      });
-     
+
+    // 홈 배너 롤링
+
+    var rollingId;
+    var bannerList = $(".info_area").find(".list_slide");
+    var bannerListItem = bannerList.children();
+    var bannerLength = bannerListItem.length;
+    var bannerItemWidth = $(".info_area").outerWidth();
+
+    bannerListItem.css("width", bannerItemWidth + "px");
+    bannerList.css("width", bannerItemWidth * bannerLength + "px");
+    rollingId = setInterval(function() { rollingStart(); }, 3000);
+
+
+    function rollingStart() {
+        var bannerList = $(".info_area").find(".list_slide");
+        var bannerListItem = bannerList.children();
+        var bannerLength = bannerListItem.length;
+        var bannerItemWidth = $(".info_area").outerWidth();
+        bannerListItem.css("width", bannerItemWidth + "px");
+        bannerList.css("width", bannerItemWidth * bannerLength + "px");
+
+        bannerList.animate({left: - bannerItemWidth}, 1000, function() {
+            $(this).append("<li class='item_slide'>" + $(this).find("li:first").html() + "</li>");
+            $(this).find("li.item_slide:first").remove();
+            $(this).find("li.item_slide").css("width", bannerItemWidth + "px");
+            $(this).css("left", 0);
+        });
+    }    
+
+    $( window ).resize( function() {
+        rollingId; 
+    });
+
+
+    // 제품 주요화면 롤링
+    var rollingView;
+    var viewList = $(".view_area").find(".list_view_img");
+    var viewListItem = viewList.children();
+    var viewLength = viewListItem.length;
+    var viewItemWidth = $(viewListItem).outerWidth();
+
+    viewList.css("width", (viewItemWidth * viewLength) + (90 * (viewLength-1)) + "px").css("left", 0);
+    rollingView = setInterval(function() { rollingViewStart(); }, 3000);
+    // rollingView2 = setInterval(function() { rollingViewMobile(); }, 3000);
+
+
+    // if(windowWidth < 560) {
+    //     rollingView2 = setInterval(function() { rollingViewMobile(); }, 3000);
+    // }
+    // else {
+    //     rollingView = setInterval(function() { rollingViewStart(); }, 3000);
+    // }
+    
+
+    function rollingViewStart() {
+        viewListItem.css("width", viewItemWidth + "px");
+        viewList.css("width", (viewItemWidth * viewLength) + (90 * (viewLength-1)) + "px").css("left", 0);
+        viewList.animate({left: "-=523px"}, 1000, function() {
+            $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
+            $(this).find("li:first").remove();
+            $(this).find("li").css("width", viewItemWidth + "px");
+        });
+    }
+
+    // $( window ).resize( function() {
+    //     if(windowWidth < 560) {
+    //         rollingView2 = setInterval(function() { rollingViewMobile(); }, 3000);
+    //     }
+    //     else {
+    //         rollingView = setInterval(function() { rollingViewStart(); }, 3000);
+    //     }
+    // });
+
+    // function rollingViewMobile() {
+    //     var viewList = $(".view_area").find(".list_view_img");
+    //     var viewListItem = viewList.children();
+    //     var viewLength = viewListItem.length;
+    //     var viewItemWidth = $(".view_area").outerWidth();
+    //     viewList.css("width", viewItemWidth + "px");
+
+    //     viewListItem.css("width", viewItemWidth + "px");
+    //     viewList.css("width", viewItemWidth * viewLength + "px");
+
+    //     viewList.animate({left: - viewItemWidth}, 1000, function() {
+    //         $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
+    //         $(this).find("li:first").remove();
+    //         $(this).find("li").css("width", viewItemWidth + "px");
+    //     });
+    // }    
 })
  

@@ -1143,10 +1143,22 @@ section[class^=section_] .section_inner {
   width: 1000px;
   margin: 0 auto;
   padding: 0 40px;
+  height: 100%;
 }
 .banner_main .info_area {
   position: relative;
   margin-top: 90px;
+  overflow: hidden;
+  height: 100%;
+}
+.banner_main .info_area .list_slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.banner_main .info_area .item_slide {
+  float: left;
+  position: relative;
 }
 .banner_main .info_area .text,
 .banner_main .info_area .desc {
@@ -1553,6 +1565,7 @@ section[class^=section_] .section_inner {
   }
   .banner_main .inner {
     width: auto;
+    height: 360px;
   }
   .banner_main .info_area {
     margin-top: 0;
@@ -1720,6 +1733,7 @@ section[class^=section_] .section_inner {
 @media all and (max-width: 560px) {
   .banner_main .inner {
     padding: 0 20px;
+    height: 450px;
   }
   .banner_main .info_area {
     text-align: center;
@@ -3225,12 +3239,6 @@ main.soho .section_view .list_view_img {
 main.soho .section_view .list_view_img li {
   float: left;
   margin-left: 90px;
-}
-main.soho .section_view .list_view_img li img {
-  transform: scale(0.9);
-}
-main.soho .section_view .list_view_img li.on img {
-  transform: scale(1);
 }
 main.soho .section_view .list_view_img li:first-child {
   margin-left: 0;
