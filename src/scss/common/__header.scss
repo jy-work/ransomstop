@@ -114,7 +114,8 @@
                                     right: 40px;
                                     
                                     a {
-                                        display: block;
+                                        display: inline-block;
+                                        vertical-align: top;
                                     }
 
                                     a img {
@@ -245,6 +246,13 @@
                         .none_link {
                             color: #aaa;
                         }
+                    }
+
+                    .list_sub li.link_banner a {
+                        padding: 0;
+                        margin: 10px 40px;
+                        width: 50%;
+                        min-width: 80%;
                     }
                 }
             }

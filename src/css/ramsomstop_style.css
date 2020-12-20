@@ -107,7 +107,8 @@
   right: 40px;
 }
 .header .gnb .list_gnb .item_gnb .link_gnb.on + .wrap_list_sub .list_sub li.link_banner a {
-  display: block;
+  display: inline-block;
+  vertical-align: top;
 }
 .header .gnb .list_gnb .item_gnb .link_gnb.on + .wrap_list_sub .list_sub li.link_banner a img {
   vertical-align: top;
@@ -212,6 +213,12 @@
   }
   .header .gnb .list_gnb .item_gnb .list_sub .none_link {
     color: #aaa;
+  }
+  .header .gnb .list_gnb .item_gnb .list_sub li.link_banner a {
+    padding: 0;
+    margin: 10px 40px;
+    width: 50%;
+    min-width: 80%;
   }
 }
 @media all and (max-width: 560px) {
