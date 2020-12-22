@@ -1175,7 +1175,14 @@ section[class^=section_] .section_inner {
   height: 44px;
   background: url("../img/home/ci.png") no-repeat;
 }
-.banner_main .info_area .gs {
+.banner_main .info_area .em.logo_rsm {
+  display: block;
+  margin-top: 4px;
+  width: 492px;
+  height: 75px;
+  background: url("../img/home/rsm.png") no-repeat;
+}
+.banner_main .info_area .gs, .banner_main .info_area .thumb_rsm {
   position: absolute;
   top: 0;
   right: 0;
@@ -1183,13 +1190,18 @@ section[class^=section_] .section_inner {
   color: #fff;
   text-align: center;
 }
-.banner_main .info_area .gs:before {
+.banner_main .info_area .gs:before, .banner_main .info_area .thumb_rsm:before {
   display: block;
   width: 444px;
   height: 252px;
   margin-bottom: 10px;
   background: url("../img/home/gs.png") no-repeat;
   content: "";
+}
+.banner_main .info_area .thumb_rsm:before {
+  height: 295px;
+  background: url("../img/home/rsm_img.png") center no-repeat;
+  background-size: auto 285px;
 }
 .banner_main .info_area .list_link_wrap {
   overflow: hidden;
@@ -1570,26 +1582,37 @@ section[class^=section_] .section_inner {
   .banner_main .info_area {
     margin-top: 0;
   }
-  .banner_main .info_area .gs {
+  .banner_main .info_area .gs, .banner_main .info_area .thumb_rsm {
     position: static;
     display: block;
     margin-top: 8px;
     font-size: 12px;
   }
-  .banner_main .info_area .gs:before {
+  .banner_main .info_area .gs:before, .banner_main .info_area .thumb_rsm:before {
     margin: 0 auto 4px;
     width: 222px;
     height: 126px;
     background-size: 222px 126px;
   }
+  .banner_main .info_area .thumb_rsm:before {
+    height: 146px;
+    background-size: auto 146px;
+  }
+  .banner_main .info_area .em.logo_rsm {
+    width: 50%;
+    height: 40px;
+    background-size: contain;
+  }
   .banner_main .info_area .desc {
     margin-top: 20px;
     font-size: 16px;
+    text-align: center;
     line-height: 22px;
   }
   .banner_main .info_area .list_link_wrap {
     margin: 20px 0 0;
     display: flex;
+    justify-content: center;
   }
   .banner_main .info_area .list_link_wrap li {
     float: none;
@@ -1738,7 +1761,7 @@ section[class^=section_] .section_inner {
   .banner_main .info_area {
     text-align: center;
   }
-  .banner_main .info_area .em {
+  .banner_main .info_area .em, .banner_main .info_area .em.logo_rsm {
     padding-top: 13.49%;
     width: auto;
     height: auto;
@@ -1815,7 +1838,7 @@ section[class^=section_] .section_inner {
   }
 }
 @media all and (max-width: 375px) {
-  .banner_main .info_area .em {
+  .banner_main .info_area .em, .banner_main .info_area .em.logo_rsm {
     width: auto;
     height: auto;
     padding-top: 13.39%;

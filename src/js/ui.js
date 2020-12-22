@@ -40,7 +40,7 @@ $(document).ready(function(){
 
     bannerListItem.css("width", bannerItemWidth + "px");
     bannerList.css("width", bannerItemWidth * bannerLength + "px");
-    rollingId = setInterval(function() { rollingStart(); }, 3000);
+    rollingId = setInterval(function() { rollingStart(); }, 4000);
 
 
     function rollingStart() {
