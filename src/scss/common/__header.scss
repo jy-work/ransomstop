@@ -126,6 +126,12 @@
                                 li.link_banner.recruit {
                                     top: 26px;
                                     right: 110px;
+
+                                    button {
+                                        border: 0;
+                                        background: 0;
+                                        padding: 0;
+                                    }
                                 }
 
                                 .none_link {
@@ -134,6 +140,10 @@
                             }
                         }
                     }
+                }
+
+                span.link_gnb {
+                    color: #999;
                 }
 
                 .list_sub {

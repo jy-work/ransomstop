@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var body = $("body");
     var gnb = $(".header .gnb");
-    var nav_item = $(".header .gnb .list_gnb .item_gnb .link_gnb");
+    var nav_item = $(".header .gnb .list_gnb .item_gnb a.link_gnb");
     var btn_gnb = $(".header .btn_gnb");
     var btn_gnb_close = $(".header .btn_close");
 
@@ -10,6 +10,7 @@ $(document).ready(function(){
         $(this).toggleClass("on");
         nav_item.not(this).removeClass("on");
     });
+
 
     // Tablet, Mobile gnb 열기
     $(btn_gnb).click(function(){
@@ -63,6 +64,24 @@ $(document).ready(function(){
         rollingId; 
     });
 
+    // 인재채용
+    var dim = $(".dim");
+    var link_recruit = $(".link_banner.recruit .sub_link");
+    var popup_recruit = $(".layer_recruit");
+    var recruit_close = $(".layer_recruit .btn_close");
+
+    $(link_recruit).click(function(){
+        dim.show();
+        popup_recruit.show();
+        $("body").attr("overflow", "hidden");
+    })
+
+    $(recruit_close).click(function(){
+        dim.hide();
+        popup_recruit.hide();
+        $("body").attr("overflow", "");
+    })
+
 
     // 제품 주요화면 롤링
     var rollingView;
@@ -85,12 +104,11 @@ $(document).ready(function(){
     
 
     function rollingViewStart() {
-        viewListItem.css("width", viewItemWidth + "px");
-        viewList.css("width", (viewItemWidth * viewLength) + (90 * (viewLength-1)) + "px").css("left", 0);
-        viewList.animate({left: "-=523px"}, 1000, function() {
+        viewList.animate({left: - viewItemWidth - 90}, 2000, function() {
             $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
             $(this).find("li:first").remove();
             $(this).find("li").css("width", viewItemWidth + "px");
+            $(this).css("left", 0);
         });
     }
 
