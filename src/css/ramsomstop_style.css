@@ -793,9 +793,11 @@ section[class^=section_] .section_inner {
 .row_form .btn_submit, .row_form .btn_cancel, .row_form .btn_del, .row_form .btn_edit {
   margin: auto;
   width: 200px;
-  height: 30px;
+  height: 36px;
+  font-size: 16px;
+  font-weight: bold;
   color: #fff;
-  line-height: 30px;
+  line-height: 36px;
 }
 .row_form .btn_submit, .row_form .btn_edit {
   background-color: #43C0F6;
