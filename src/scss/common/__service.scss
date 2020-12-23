@@ -57,6 +57,26 @@
                 text-align: center;
                 line-height: 20px;
                 vertical-align: top;
+
+                &:after {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 50%;
+                    width: 38px;
+                    height: 38px;
+                    transform: translateX(-19px);
+                    background: url("./../img/contact1.png") center no-repeat;
+                    background-size: contain;
+                    content: '';
+                }
+            }
+
+            .link_service:nth-child(2):after {
+                background-image: url("./../img/contact2.png");
+            }
+            
+            .link_service:nth-child(3):after {
+                background-image: url("./../img/contact3.png");
             }
         }
     }

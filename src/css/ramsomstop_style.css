@@ -363,6 +363,23 @@ section[class^=section_] .section_inner {
   line-height: 20px;
   vertical-align: top;
 }
+.service .inner .wrap_service .link_service:after {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 38px;
+  height: 38px;
+  transform: translateX(-19px);
+  background: url("./../img/contact1.png") center no-repeat;
+  background-size: contain;
+  content: "";
+}
+.service .inner .wrap_service .link_service:nth-child(2):after {
+  background-image: url("./../img/contact2.png");
+}
+.service .inner .wrap_service .link_service:nth-child(3):after {
+  background-image: url("./../img/contact3.png");
+}
 
 @media all and (max-width: 768px) {
   .service {
@@ -2169,7 +2186,6 @@ main.pro .banner_pro .title {
   color: #fff;
 }
 main.pro .banner_pro .wrap_link_box {
-  margin-top: 20px;
   display: flex;
 }
 main.pro .banner_pro .wrap_link_box .link_box {
@@ -2482,7 +2498,7 @@ main.pro .section_specification .list_spec .list_detail_spec li:before {
     text-align: center;
   }
   main.pro .banner_pro .wrap_link_box .link_box.pro {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   main.pro .section_info .list_info img {
     float: none;
@@ -3860,6 +3876,22 @@ main.server .section_info .list_info {
 main.server .section_info .list_info li {
   flex-basis: 33.33%;
   padding: 0 12px;
+}
+main.server .section_info .list_info li:before {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  background: #e14658 url("./../img/server/info1.png") center no-repeat;
+  border-radius: 50%;
+  vertical-align: top;
+  background-size: 55% auto;
+  content: "";
+}
+main.server .section_info .list_info li:nth-child(2):before {
+  background-image: url("./../img/server/info2.png");
+}
+main.server .section_info .list_info li:nth-child(3):before {
+  background-image: url("./../img/server/info3.png");
 }
 main.server .section_info .list_info li img {
   width: 120px;

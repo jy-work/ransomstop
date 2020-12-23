@@ -52,6 +52,24 @@ main.server {
             li {
                 flex-basis: 33.33%;
                 padding: 0 12px;
+                &:before {
+                    display: inline-block;
+                    width: 120px;
+                    height: 120px;
+                    background: $theme_red url("./../img/server/info1.png") center no-repeat;
+                    border-radius: 50%;
+                    vertical-align: top;
+                    background-size: 55% auto;
+                    content: '';
+                }
+            }
+
+            li:nth-child(2):before {
+                background-image: url("./../img/server/info2.png");
+            }
+
+            li:nth-child(3):before {
+                background-image: url("./../img/server/info3.png");
             }
 
             li img {
