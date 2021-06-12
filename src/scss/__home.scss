@@ -23,11 +23,25 @@
         position: relative;
         overflow: hidden;
         @include inner;
+        height: 100%;
     }
 
     .info_area {
         position: relative;
         margin-top: 90px;
+        overflow: hidden;
+        height: 100%;
+
+        .list_slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .item_slide {
+            float: left;
+            position: relative;
+        }
 
         .text,
         .desc {
@@ -47,7 +61,15 @@
             background: url('../img/home/ci.png') no-repeat;
         }
 
-        .gs {
+        .em.logo_rsm {
+            display: block;
+            margin-top: 4px;
+            width: 492px;
+            height: 75px;
+            background: url('../img/home/rsm.png') no-repeat;
+        }
+
+        .gs, .thumb_rsm {
             position: absolute;
             top: 0;
             right: 0;
@@ -55,13 +77,21 @@
             color: #fff;
             text-align: center;
 
-            &::before {
+            &:before {
                 display: block;
                 width: 444px;
                 height: 252px;
                 margin-bottom: 10px;
                 background: url('../img/home/gs.png') no-repeat;
                 content: '';
+            }
+        }
+
+        .thumb_rsm {
+            &:before {
+                height: 295px;
+                background: url('../img/home/rsm_img.png') center no-repeat;
+                background-size: auto 285px;
             }
         }
 
@@ -73,7 +103,7 @@
                 float: left;
                 
                 & + li {
-                    margin-left: 20px;;
+                    margin-left: 20px;
                 }
             }
 
@@ -147,7 +177,7 @@
             margin: 0 0 0 -125px;
             vertical-align: top;
 
-            &::before {
+            &:before {
                 position: relative;
                 display: inline-block;
                 width: 42px;
@@ -157,7 +187,7 @@
                 z-index: 1;
             }
 
-            &::after {
+            &:after {
                 @include full;
                 background: url("../img/home/square_blue.png") no-repeat;
                 background-size: cover;
@@ -167,7 +197,7 @@
             &:nth-child(2n) {
                 margin-top: 140px;
 
-                &::after {
+                &:after {
                     background-image: url("../img/home/square_red.png");
                 }
             }
@@ -175,37 +205,37 @@
             &:nth-child(1) {
                 margin-left: 0;
 
-                &::before {
+                &:before {
                     background: url('../img/home/path1.png') no-repeat;
                 }
             }
             
             &:nth-child(2) {
-                &::before {
+                &:before {
                     background: url('../img/home/path2.png') no-repeat 3px 1px;
                 }
             }
 
             &:nth-child(3) {
-                &::before {
+                &:before {
                     background: url('../img/home/path3.png') no-repeat 14px 3px;
                 }
             }
 
             &:nth-child(4) {
-                &::before {
+                &:before {
                     background: url('../img/home/path4.png') no-repeat 2px 2px;
                 }
             }
 
             &:nth-child(5) {
-                &::before {
+                &:before {
                     background: url('../img/home/path5.png') no-repeat 4px 4px;
                 }
             }
 
             &:nth-child(6) {
-                &::before {
+                &:before {
                     background: url('../img/home/path6.png') no-repeat 1px 2px;
                 }
             }
@@ -268,7 +298,7 @@
                 margin-top: 60px;
             }
 
-            &::before {
+            &:before {
                 position: absolute;
                 top: -60px;
                 left: 0;
@@ -278,35 +308,35 @@
                 color: $theme_blue;
             }
 
-            &:nth-child(1)::before {
+            &:nth-child(1):before {
                 content: "01";
             }
 
-            &:nth-child(2)::before {
+            &:nth-child(2):before {
                 content: "02";
             }
 
-            &:nth-child(3)::before {
+            &:nth-child(3):before {
                 content: "03";
             }
 
-            &:nth-child(4)::before {
+            &:nth-child(4):before {
                 content: "04";
             }
 
-            &:nth-child(5)::before {
+            &:nth-child(5):before {
                 content: "05";
             }
 
-            &:nth-child(6)::before {
+            &:nth-child(6):before {
                 content: "06";
             }
 
-            &:nth-child(7)::before {
+            &:nth-child(7):before {
                 content: "07";
             }
 
-            &::after {
+            &:after {
                 position: absolute;
                 bottom: -36px;
                 transform: translateX(-50%);
@@ -317,7 +347,7 @@
                 content: '';
             }
 
-            &:last-child::after {
+            &:last-child:after {
                 content: none;
             }
         }
@@ -362,28 +392,26 @@
             line-height: 24px;
             letter-spacing: -0.5px;
     
-            &::before {
+            &:before {
                 display: block;
                 margin: 38px auto 32px;
                 width: 106px;
-                height: 78px;
+                height: 84px;
+                background-repeat: no-repeat;
+                background-position: center;
                 content: '';
             }
 
-            &:nth-child(1)::before {
-                background: url('../img/home/protect1.png') no-repeat;
-                background-position: 0 4px;
-
+            &:nth-child(1):before {
+                background-image: url('../img/home/protect1.png');
             }
 
-            &:nth-child(2)::before {
-                background: url('../img/home/protect2.png') no-repeat;
-                background-position: 13px 4px;
+            &:nth-child(2):before {
+                background-image: url('../img/home/protect2.png');
             }
 
-            &:nth-child(3)::before {
-                background: url('../img/home/protect3.png') no-repeat;
-                background-position: 4px 0;
+            &:nth-child(3):before {
+                background-image: url('../img/home/protect3.png');
             }
     
             & + .item_protect {
@@ -428,13 +456,14 @@
 
             .list_product {
                 padding: 8px 40px 0;
+                min-height: 64px;
 
                 li {
                     display: block;
                     margin-top: 4px;
                     line-height: 24px;
 
-                    &::before {
+                    &:before {
                         display: inline-block;
                         margin: 9px 8px 0 0;
                         width: 5px;
@@ -467,16 +496,16 @@
                 line-height: 36px;
             }
 
-            &::before {
+            &:before {
                 display: block;
                 height: 250px;
-                background: #f7f7f7 url('../img/home/software1.png') no-repeat;
+                background: #f7f7f7 url('../img/home/software1.png') center no-repeat;
                 background-size: contain;
                 content: '';
             }
         }
 
-        .type_product:last-of-type .box_product::before {
+        .type_product:last-of-type .box_product:before {
             background-image: url('../img/home/software2.png');
         }
     }
@@ -515,12 +544,13 @@
 
         .inner {
             width: auto;
+            height: 360px;
         }
 
         .info_area {
             margin-top: 0;
 
-            .gs {
+            .gs, .thumb_rsm {
                 position: static;
                 display: block;
                 margin-top: 8px;
@@ -534,15 +564,28 @@
                 }
             }
 
+            .thumb_rsm:before  {
+                height: 146px;
+                background-size: auto 146px;
+            }
+
+            .em.logo_rsm {
+                width: 50%;
+                height: 40px;
+                background-size: contain;
+            }
+
             .desc {
                 margin-top: 20px;
                 font-size: 16px;
+                text-align: center;
                 line-height: 22px;
             }
 
             .list_link_wrap {
                 margin: 20px 0 0;
                 display: flex;
+                justify-content: center;
 
                 li {
                     float: none;
@@ -626,12 +669,12 @@
             .item_steps {
                 padding: 4px 0;
 
-                &::before {
+                &:before {
                     font-size: 40px;
                     top: -40px;
                 }
 
-                &::after {
+                &:after {
                     bottom: -30px;
                     width: 48px;
                     height: 25px;
@@ -659,7 +702,7 @@
                 font-size: 14px;
                 line-height: 18px;
 
-                &::before {
+                &:before {
                     margin: 18px auto 20px;
                 }
 
@@ -687,7 +730,7 @@
                 padding: 55.55% 20px 10px;
                 font-size: 16px;
 
-                &::before {
+                &:before {
                     @include full;
                     bottom: auto;
                     padding-top: 55.55%;
@@ -721,12 +764,13 @@
     .banner_main {
         .inner {
             padding: 0 20px;
+            height: 450px;
         }
 
         .info_area {
             text-align: center;
             
-            .em {
+            .em, .em.logo_rsm {
                 padding-top: 13.49%;
                 width: auto;
                 height: auto;
@@ -762,7 +806,7 @@
                     border-radius: 10px;
                     background-color: $theme_blue;
     
-                    &::after {
+                    &:after {
                         background: 0;
                     }
     
@@ -811,7 +855,7 @@
                 width: auto;
                 min-height: auto;
 
-                &::before {
+                &:before {
                     margin: 0 auto;
                 }
 
@@ -832,7 +876,7 @@
 @include Mobile {
     .banner_main {
         .info_area {
-            .em {
+            .em, .em.logo_rsm {
                 width: auto;
                 height: auto;
                 padding-top: 13.39%;

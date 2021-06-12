@@ -51,7 +51,7 @@ main.rsm {
         .wrap_list_info {
             margin-top: 30px;
 
-            &::after {
+            &:after {
                 @include clear;
             }
             
@@ -136,7 +136,7 @@ main.rsm {
                 li {
                     line-height: 30px;
 
-                    &::before {
+                    &:before {
                         display: inline-block;
                         width: 4px;
                         height: 4px;
@@ -186,28 +186,38 @@ main.rsm {
                 vertical-align: top;
                 box-sizing: border-box;
 
-                &::before {
+                &:before {
                     display: inline-block;
                     width: 120px;
                     height: 120px;
-                    background-color: $theme_blue;
+                    background: $theme_blue url("./../img/rsm/item1.png") center no-repeat;
                     border-radius: 50%;
                     vertical-align: top;
+                    background-size: 55% auto;
                     content: '';
                 }
-
-                &.em {
-                    .name_function {
-                        color: $theme_red;
-                    }
-
-                    &::before {
-                        border: 4px solid $theme_blue;
-                        background-color: #fff;
-                        box-sizing: border-box;
-                    }
-                }
             }
+
+            li:nth-child(2):before {
+                background-image: url("./../img/rsm/item2.png");
+            }
+
+            li:nth-child(3):before {
+                background-image: url("./../img/rsm/item3.png");
+            }
+
+            li:nth-child(4):before {
+                background-image: url("./../img/rsm/item4.png");
+            }
+
+            li:nth-child(5):before {
+                background-image: url("./../img/rsm/item5.png");
+            }
+
+            li:nth-child(6):before {
+                background-image: url("./../img/rsm/item6.png");
+            }
+
 
             .wrap_text {
                 margin-top: 12px;
@@ -258,20 +268,12 @@ main.rsm {
                 float: left;
                 margin-left: 90px;
 
-                img {
-                    transform: scale(0.9);
-                }
-
-                &.on img {
-                    transform: scale(1);
-                }
-
                 &:first-child {
                     margin-left: 0;
                 }
             }
 
-            &::after{ 
+            &:after{ 
                 @include clear;
             }
         }
@@ -311,7 +313,7 @@ main.rsm {
                     padding-left: 12px;
                     line-height: 26px;
 
-                    &::before {
+                    &:before {
                         position: absolute;
                         top: 11px;
                         left: 0;
@@ -380,7 +382,7 @@ main.rsm {
                     font-size: 16px;
                     line-height: 26px;
                     
-                    &::before {
+                    &:before {
                         margin-top: 11px;
                     }
                 }
@@ -508,7 +510,7 @@ main.rsm {
         .section_function {
             .list_function {
 
-                &::after {
+                &:after {
                     @include clear;
                 }
 
@@ -517,7 +519,7 @@ main.rsm {
                     width: auto;
                     padding: 15px 0;
 
-                    &::before {
+                    &:before {
                         flex-shrink: 0;
                     }
 
@@ -547,7 +549,7 @@ main.rsm {
                     li {
                         line-height: 22px;
 
-                        &::before {
+                        &:before {
                             top: 9px;
                         }
                     }
