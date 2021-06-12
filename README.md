@@ -26,7 +26,7 @@ https://nodejs.org/ko/
 4. `sass --version`로 sass 설치 확인
 
 #### sass 실행하기
-`ransomstop/src` 로 위치한 후
+`\ransomstop` 로 위치한 후
 ```
 $ sass --watch scss/:css/
 ```
