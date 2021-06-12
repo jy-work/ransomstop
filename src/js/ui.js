@@ -137,5 +137,6 @@ $(document).ready(function(){
     //         $(this).find("li").css("width", viewItemWidth + "px");
     //     });
     // }    
+    
 })
  

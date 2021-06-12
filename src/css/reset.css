@@ -36,6 +36,7 @@ a {
 
 button {
   border: 0;
+  cursor: pointer;
 }
 
 em, strong {
