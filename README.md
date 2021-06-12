@@ -28,5 +28,5 @@ https://nodejs.org/ko/
 #### sass 실행하기
 `\ransomstop` 로 위치한 후
 ```
-$ sass --watch scss/:css/
+$ sass --watch src/scss/:src/css/
 ```
