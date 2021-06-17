@@ -1,3 +1,7 @@
+.wrap {
+  min-width: 1280px;
+}
+
 section .section_title {
   font-size: 36px;
   font-weight: bold;
@@ -16,6 +20,51 @@ section .section_title .sub.fullname {
 section .section_desc {
   font-size: 12px;
   color: #999;
+}
+section .section_text {
+  margin: 40px 40px 0;
+  font-size: 18px;
+  color: #5c6268;
+  text-align: left;
+  line-height: 24px;
+}
+section .img_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  text-align: left;
+}
+section .img_list img {
+  margin-right: 30px;
+}
+section .img_list .list_section {
+  font-size: 16px;
+  line-height: 28px;
+}
+section .img_list .list_section li, section .img_list .list_section dt {
+  position: relative;
+  padding-left: 12px;
+}
+section .img_list .list_section li::before, section .img_list .list_section dt::before {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  vertical-align: top;
+  content: "";
+}
+section .img_list .list_section dt {
+  font-weight: bold;
+}
+section .img_list .list_section dd {
+  font-size: 15px;
+  margin-left: 12px;
+}
+section .img_list strong + .list_section {
+  margin-top: 20px;
 }
 
 .inner {
@@ -45,24 +94,20 @@ header .link_logo {
   background: url(./../img/home_knowwheresoft/logo.png) no-repeat;
   vertical-align: top;
 }
+header.scrolled {
+  background-color: rgba(0, 0, 0, 0.7);
+}
 
 nav .list_gnb {
   overflow: hidden;
   margin-top: 27px;
 }
 nav .list_gnb li {
+  position: relative;
   float: left;
   margin-left: 24px;
 }
-nav .list_gnb .link {
-  position: relative;
-  display: block;
-  padding: 12px;
-  font-size: 16px;
-  font-weight: 300;
-  color: #fff;
-}
-nav .list_gnb .link.on::after {
+nav .list_gnb li.on::after {
   position: absolute;
   bottom: 0;
   left: 12px;
@@ -70,6 +115,13 @@ nav .list_gnb .link.on::after {
   height: 2px;
   background-color: #58acda;
   content: "";
+}
+nav .list_gnb .link {
+  display: block;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
 }
 
 #section_banner {
@@ -95,20 +147,34 @@ nav .list_gnb .link.on::after {
   z-index: 1000;
 }
 #section_banner .wrap_banner {
+  position: relative;
   overflow: hidden;
-  margin-top: 90px;
+  width: 1100px;
+  height: 363px;
+  padding: 60px 0 24px;
+  margin: 0 auto;
 }
 #section_banner .wrap_banner .list_banner {
-  overflow: hidden;
-  width: 3600px;
+  position: absolute;
+  top: 60px;
+  width: 3300px;
+  height: 363px;
 }
 #section_banner .wrap_banner .item_banner {
   float: left;
   display: flex;
-  width: 1200px;
+  justify-content: center;
+  align-items: center;
+  width: 1100px;
 }
-#section_banner .wrap_banner .item_banner img {
-  margin-top: -144px;
+#section_banner .wrap_banner .item_banner:first-child img {
+  margin-top: -90px;
+}
+#section_banner .wrap_banner .item_banner:nth-child(2) img {
+  margin-right: 20px;
+}
+#section_banner .wrap_banner .item_banner:nth-child(3) img {
+  margin-right: 30px;
 }
 #section_banner .wrap_banner .item_banner .wrap_banner_text {
   margin-left: 14px;
@@ -125,10 +191,11 @@ nav .list_gnb .link.on::after {
   margin-right: 0;
   font-size: 16px;
   color: #fff;
+  line-height: 28px;
 }
 #section_banner .wrap_banner .item_banner .text em {
   display: inline-block;
-  margin-top: 35px;
+  margin-top: 20px;
   font-weight: 600;
   vertical-align: top;
 }
@@ -139,8 +206,9 @@ nav .list_gnb .link.on::after {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   vertical-align: top;
+  transition: 0.5s all;
 }
 #section_banner .wrap_btn button + button {
   margin-left: 5px;
@@ -148,6 +216,34 @@ nav .list_gnb .link.on::after {
 #section_banner .wrap_btn button.on {
   width: 120px;
   border-radius: 10px;
+}
+#section_banner .list_text {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 28px;
+}
+#section_banner .list_text li, #section_banner .list_text dt {
+  position: relative;
+  padding-left: 12px;
+}
+#section_banner .list_text li::before, #section_banner .list_text dt::before {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  vertical-align: top;
+  content: "";
+}
+#section_banner .list_text dt {
+  font-weight: bold;
+}
+#section_banner .list_text dd {
+  font-size: 15px;
+  margin-left: 12px;
 }
 
 .section_works {
@@ -220,6 +316,7 @@ nav .list_gnb .link.on::after {
 }
 #section_overview .list_overview .link_popup {
   display: flex;
+  width: 100%;
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
@@ -236,19 +333,37 @@ nav .list_gnb .link.on::after {
 }
 
 #section_ai .section_desc {
+  margin-top: 10px;
   color: #fff;
 }
+#section_ai .section_text {
+  color: #fff;
+}
+#section_ai .img_list strong {
+  color: #fff;
+}
+#section_ai .list_section {
+  color: #fff;
+}
+#section_ai .list_section dt::before, #section_ai .list_section li::before {
+  background-color: #fff;
+}
 
-#section_bigdata .text {
-  margin: 40px 40px 0;
-  font-size: 18px;
-  color: #5c6268;
-  text-align: left;
-  line-height: 24px;
+#section_bigdata dt::before, #section_bigdata li::before {
+  background-color: #000;
 }
 
 #section_monitoring .section_desc {
-  color: #e8e8e8;
+  color: #fff;
+}
+#section_monitoring .section_text {
+  color: #fff;
+}
+#section_monitoring .list_section {
+  color: #fff;
+}
+#section_monitoring .list_section dt::before, #section_monitoring .list_section li::before {
+  background-color: #fff;
 }
 
 #section_solution {
@@ -261,70 +376,85 @@ nav .list_gnb .link.on::after {
   position: relative;
 }
 #section_solution .wrap_banner {
+  position: relative;
   overflow: hidden;
   margin-top: 40px;
   height: 360px;
 }
 #section_solution .wrap_banner .list_banner {
-  position: relative;
+  position: absolute;
+  top: 0;
   overflow: hidden;
   width: 3600px;
   height: 100%;
   z-index: 1;
 }
-#section_solution .wrap_banner .item_banner {
+#section_solution .wrap_banner .list_banner li {
   float: left;
   padding: 0 180px;
-  width: 1200px;
+  width: 1200px !important;
   height: 100%;
   background-repeat: no-repeat;
   box-sizing: border-box;
 }
-#section_solution .wrap_banner .item_banner:first-child {
-  background-image: url("./../img/home_knowwheresoft/solution_1.png");
-  background-size: 554px auto;
-  background-position: 560px bottom;
+#section_solution .wrap_banner .list_banner li .wrap_banner_text {
+  margin-left: auto;
+  max-width: initial;
+}
+#section_solution .wrap_banner .list_banner li .wrap_banner_text .banner_desc {
+  line-height: 28px;
+}
+#section_solution .wrap_banner .list_banner li img[class^=banner] {
+  position: absolute;
+  top: 0;
+}
+#section_solution .wrap_banner .list_banner li img.banner1 {
+  right: -100px;
+}
+#section_solution .wrap_banner .list_banner li img.banner2 {
+  right: -80px;
+}
+#section_solution .wrap_banner .list_banner li img.banner3 {
+  right: -120px;
 }
 #section_solution .wrap_banner .wrap_banner_text {
+  position: relative;
+  max-width: 580px;
   margin-top: 30px;
   color: #fff;
   text-align: left;
 }
-#section_solution .wrap_banner .title {
-  font-size: 40px;
-  font-weight: bold;
-}
 #section_solution .wrap_banner .banner_desc {
+  max-width: 560px;
   margin-top: 10px;
   font-size: 20px;
   line-height: 38px;
 }
+#section_solution .wrap_banner .banner_desc.small {
+  font-size: 14px;
+  line-height: 28px;
+}
 #section_solution .wrap_banner .link_more {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 5px 10px;
   border: 1px solid #fff;
   font-size: 16px;
   vertical-align: top;
 }
-#section_solution .wrap_btn {
+#section_solution button {
   position: absolute;
   top: 50%;
-  left: 0;
-  right: 0;
   transform: translateY(-50%);
-}
-#section_solution .wrap_btn button {
-  position: absolute;
-  top: 0;
   width: 59px;
   height: 87px;
+  z-index: 1;
 }
-#section_solution .wrap_btn button.btn_pre {
+#section_solution button.btn_pre {
   left: 0;
   background: url("./../img/home_knowwheresoft/solution_arrow_pre.png") no-repeat;
 }
-#section_solution .wrap_btn button.btn_next {
+#section_solution button.btn_next {
   right: 0;
   background: url("./../img/home_knowwheresoft/solution_arrow_next.png") no-repeat;
 }
@@ -354,13 +484,6 @@ nav .list_gnb .link.on::after {
 }
 #section_contact .map_area {
   height: 480px;
-  background-color: #666;
-  text-align: center;
-  font-size: 40px;
-  color: #fff;
-}
-#section_contact .map_area p {
-  padding-top: 200px;
 }
 
 footer {
@@ -406,7 +529,7 @@ footer select[name=family_site] option {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 20000;
 }
 .dim.on {
@@ -468,7 +591,8 @@ footer select[name=family_site] option {
   right: 30px;
   width: 50px;
   height: 50px;
-  background-color: #fff;
+  background: url("./../img/home_knowwheresoft/icon_close.png") no-repeat;
+  background-size: 50px 50px;
 }
 
 /*# sourceMappingURL=knowwhere.css.map */
