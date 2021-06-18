@@ -536,6 +536,7 @@ footer select[name=family_site] option {
   display: block;
 }
 .dim .popup {
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -546,6 +547,9 @@ footer select[name=family_site] option {
   background-color: #2d2d2d;
   color: #fff;
   box-sizing: border-box;
+}
+.dim .popup.on {
+  display: block;
 }
 .dim .popup .title {
   display: block;
@@ -562,7 +566,8 @@ footer select[name=family_site] option {
 }
 .dim .popup .txt_area {
   margin-top: 40px;
-  font-size: 18px;
+  font-size: 16px;
+  text-align: center;
   line-height: 26px;
 }
 .dim .popup .txt_area em {

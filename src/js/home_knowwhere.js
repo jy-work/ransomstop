@@ -29,8 +29,21 @@ $(document).ready(function () {
         $(this).siblings().removeClass('on');
     })
 
-    $('.link_popup').click(function () {
+    $('.list_overview li:first-child .link_popup').click(function () {
         $('.dim').addClass('on');
+        $('.popup.about').addClass('on');
+        $('body').css('overflow', 'hidden');
+    })
+
+    $('.list_overview li:nth-child(2) .link_popup').click(function () {
+        $('.dim').addClass('on');
+        $('.popup.culture').addClass('on');
+        $('body').css('overflow', 'hidden');
+    })
+
+    $('.list_overview li:nth-child(3) .link_popup').click(function () {
+        $('.dim').addClass('on');
+        $('.popup.organization').addClass('on');
         $('body').css('overflow', 'hidden');
     })
 

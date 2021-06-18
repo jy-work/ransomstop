@@ -371,6 +371,7 @@ nav {
         }
 
         .link_popup {
+            display: none;
             display: flex;
             width: 100%;
             height: 100%;
@@ -664,6 +665,7 @@ footer {
     }
 
     .popup {
+        display: none;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -674,6 +676,10 @@ footer {
         background-color: #2d2d2d;
         color: #fff;
         box-sizing: border-box;
+
+        &.on {
+            display: block;
+        }
 
         .title {
             display: block;
@@ -692,7 +698,7 @@ footer {
 
         .txt_area {
             margin-top: 40px;
-            font-size: 18px;
+            font-size: 16px;
             line-height: 26px;
 
             em {
