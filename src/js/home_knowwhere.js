@@ -29,7 +29,7 @@ $(document).ready(function () {
         $(this).siblings().removeClass('on');
     })
 
-    $('.list_overview li:first-child .link_popup').click(function () {
+    $('.list_overview li:nth-child(1) .link_popup').click(function () {
         $('.dim').addClass('on');
         $('.popup.about').addClass('on');
         $('body').css('overflow', 'hidden');
