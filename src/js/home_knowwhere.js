@@ -32,23 +32,64 @@ $(document).ready(function () {
     $('.list_overview li:nth-child(1) .link_popup').click(function () {
         $('.dim').addClass('on');
         $('.popup.about').addClass('on');
+        $('.popup.about').siblings().removeClass('on');
         $('body').css('overflow', 'hidden');
     })
 
     $('.list_overview li:nth-child(2) .link_popup').click(function () {
         $('.dim').addClass('on');
         $('.popup.culture').addClass('on');
+        $('.popup.culture').siblings().removeClass('on');
         $('body').css('overflow', 'hidden');
     })
 
     $('.list_overview li:nth-child(3) .link_popup').click(function () {
         $('.dim').addClass('on');
         $('.popup.organization').addClass('on');
+        $('.popup.organization').siblings().removeClass('on');
         $('body').css('overflow', 'hidden');
+    })
+
+    $('.list_overview li:nth-child(4) .link_popup').click(function () {
+        $('.dim').addClass('on');
+        $('.popup.history').addClass('on');
+        $('.popup.history').siblings().removeClass('on');
+        $('body').css('overflow', 'hidden');
+    })
+
+    $('.popup.history .list_year button').click(function() {
+        $(this).parent('li').addClass('on');
+        $(this).parent('li').siblings().removeClass('on');
+    })
+
+    $('.popup.history .list_year li:first-child button').click(function() {
+        $('.list_history').removeClass('on');
+        $('.list_history.y2021').addClass('on');
+    })
+
+    $('.popup.history .list_year li:nth-child(2) button').click(function() {
+        $('.list_history').removeClass('on');
+        $('.list_history.y2020').addClass('on');
+    })
+
+    $('.popup.history .list_year li:nth-child(3) button').click(function() {
+        $('.list_history').removeClass('on');
+        $('.list_history.y2019').addClass('on');
+    })
+
+    $('.popup.history .list_year li:nth-child(4) button').click(function() {
+        $('.list_history').removeClass('on');
+        $('.list_history.y2018').addClass('on');
+    })
+
+    $('.popup.history .list_year li:nth-child(5) button').click(function() {
+        $('.list_history').removeClass('on');
+        $('.list_history.y2017').addClass('on');
     })
 
     $('.dim .btn_close').click(function () {
         $('.dim').removeClass('on');
+        $('.popup').removeClass('on');
         $('body').css('overflow', 'visible');
     })
 

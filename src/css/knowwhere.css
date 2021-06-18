@@ -315,6 +315,7 @@ nav .list_gnb .link {
   background-image: url("./../img/home_knowwheresoft/overview_history.png");
 }
 #section_overview .list_overview .link_popup {
+  display: none;
   display: flex;
   width: 100%;
   height: 100%;
@@ -507,19 +508,27 @@ footer address {
 footer address span {
   float: right;
 }
-footer select[name=family_site] {
-  background: 0;
-  width: 154px;
-  height: 29px;
+footer .familysite {
+  position: relative;
+  width: 108px;
+  height: 21px;
   padding: 5px 8px;
   border-radius: 0;
   border: 2px solid #fff;
   color: #fff;
-  font-size: 12px;
-  outline: 0;
+  font-size: 14px;
+  text-align: left;
 }
-footer select[name=family_site] option {
-  color: #000;
+footer .familysite::after {
+  position: absolute;
+  top: 13px;
+  right: 8px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 4px 0 4px;
+  border-color: #ffffff transparent transparent transparent;
+  content: "";
 }
 
 .dim {
@@ -551,6 +560,9 @@ footer select[name=family_site] option {
 .dim .popup.on {
   display: block;
 }
+.dim .popup.culture {
+  text-align: center;
+}
 .dim .popup .title {
   display: block;
   color: #58acda;
@@ -567,7 +579,6 @@ footer select[name=family_site] option {
 .dim .popup .txt_area {
   margin-top: 40px;
   font-size: 16px;
-  text-align: center;
   line-height: 26px;
 }
 .dim .popup .txt_area em {
@@ -589,6 +600,54 @@ footer select[name=family_site] option {
   display: inline-block;
   width: 135px;
   font-weight: bold;
+}
+.dim .list_wrap {
+  display: flex;
+  height: 400px;
+  margin-top: 40px;
+}
+.dim .list_wrap .list_year {
+  width: 150px;
+  height: 100%;
+  padding-right: 20px;
+  margin-right: 70px;
+  border-right: 1px solid #fff;
+  text-align: right;
+}
+.dim .list_wrap .list_year button {
+  vertical-align: top;
+  font-size: 30px;
+  line-height: 50px;
+  background-color: transparent;
+  color: #fff;
+}
+.dim .list_wrap .list_year .on button {
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 70px;
+  color: #58acda;
+}
+.dim .list_wrap .list_history {
+  display: none;
+}
+.dim .list_wrap .list_history li {
+  display: flex;
+  font-size: 18px;
+}
+.dim .list_wrap .list_history li + li {
+  margin-top: 12px;
+}
+.dim .list_wrap .list_history span {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 30px;
+}
+.dim .list_wrap .list_history span.month {
+  width: 80px;
+  flex-shrink: 0;
+}
+.dim .list_wrap .list_history.on {
+  display: block;
 }
 .dim .btn_close {
   position: absolute;
