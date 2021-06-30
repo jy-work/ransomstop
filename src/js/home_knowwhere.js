@@ -98,18 +98,21 @@ $(document).ready(function () {
         $('#section_banner .list_banner').animate({"left": "0"});
         $(this).addClass('on');
         $(this).siblings().removeClass('on');
+        mainRolling = 1;
     })
 
     $("#section_banner button:nth-child(2)").click(function(){
         $('#section_banner .list_banner').animate({"left": "-1100px"});
         $(this).addClass('on');
         $(this).siblings().removeClass('on');
+        mainRolling = 2;
     })
 
     $("#section_banner button:nth-child(3)").click(function(){
         $('#section_banner .list_banner').animate({"left": "-2200px"});
         $(this).addClass('on');
         $(this).siblings().removeClass('on');
+        mainRolling = 3;
     })
 
     // 솔루션 롤링
