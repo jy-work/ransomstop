@@ -167,14 +167,8 @@ nav .list_gnb .link {
   align-items: center;
   width: 1100px;
 }
-#section_banner .wrap_banner .item_banner:first-child img {
+#section_banner .wrap_banner .item_banner img {
   margin-top: -90px;
-}
-#section_banner .wrap_banner .item_banner:nth-child(2) img {
-  margin-right: 20px;
-}
-#section_banner .wrap_banner .item_banner:nth-child(3) img {
-  margin-right: 30px;
 }
 #section_banner .wrap_banner .item_banner .wrap_banner_text {
   margin-left: 14px;
@@ -203,12 +197,14 @@ nav .list_gnb .link {
   text-align: center;
 }
 #section_banner .wrap_btn button {
+  position: relative;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.8);
   vertical-align: top;
   transition: 0.5s all;
+  cursor: initial;
 }
 #section_banner .wrap_btn button + button {
   margin-left: 5px;
@@ -216,6 +212,33 @@ nav .list_gnb .link {
 #section_banner .wrap_btn button.on {
   width: 120px;
   border-radius: 10px;
+}
+#section_banner .wrap_btn button.on::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #58acda;
+  content: "";
+  animation-duration: 2.75s;
+  animation-name: fullBar;
+  animation-fill-mode: forwards;
+}
+@keyframes fullBar {
+  0% {
+    width: 0px;
+    border-radius: 10px 0 0 10px;
+  }
+  70% {
+    border-radius: 10px 0 0 10px;
+  }
+  85% {
+    border-radius: 10px;
+  }
+  100% {
+    width: 100%;
+    border-radius: 10px;
+  }
 }
 #section_banner .list_text {
   margin-top: 20px;

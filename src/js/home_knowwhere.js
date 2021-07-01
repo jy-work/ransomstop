@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     var didScroll;
     var lastScrollTop = 0;
     var navbarHeight = $('header').outerHeight();
@@ -93,38 +92,20 @@ $(document).ready(function () {
         $('body').css('overflow', 'visible');
     })
 
-    // 메인 배너 롤링
-    $("#section_banner button:first-child").click(function(){
-        $('#section_banner .list_banner').animate({"left": "0"});
-        $(this).addClass('on');
-        $(this).siblings().removeClass('on');
-        mainRolling = 1;
-    })
-
-    $("#section_banner button:nth-child(2)").click(function(){
-        $('#section_banner .list_banner').animate({"left": "-1100px"});
-        $(this).addClass('on');
-        $(this).siblings().removeClass('on');
-        mainRolling = 2;
-    })
-
-    $("#section_banner button:nth-child(3)").click(function(){
-        $('#section_banner .list_banner').animate({"left": "-2200px"});
-        $(this).addClass('on');
-        $(this).siblings().removeClass('on');
-        mainRolling = 3;
-    })
-
     // 솔루션 롤링
 
     var $panel = $("#section_solution .wrap_banner").find(".list_banner");
+    var $panelWrapMain = $("#section_banner .wrap_btn");
+    var $panelMain = $("#section_banner .wrap_banner").find(".list_banner");
     var itemWidth = 1200; // 아이템 가로 길이
+    var itemWidthMain = 1100; // 아이템 가로 길이
 
     // Auto 롤링 아이디
     var rollingSolution;
     var rollingMainBanner;
-    var mainRolling = 1;
     auto();
+    var mainRolling = 2;
+
 
     // 이전 이벤트
     $("#section_solution .btn_pre").on("click", prev);
@@ -141,13 +122,14 @@ $(document).ready(function () {
     $("#section_solution .btn_next").mouseout(auto);
 
     function auto() {
-        // 2초마다 start 호출
+        // 3초마다 start 호출
         rollingSolution = setInterval(function () {
             startRoop();
         }, 3000);
 
         rollingMainBanner = setInterval(function () {
             startRolling();
+            setIndicator();
         }, 3000);
     }
 
@@ -169,21 +151,38 @@ $(document).ready(function () {
     }
 
     function startRolling() {
-        if(mainRolling == 1) {
-            $('#section_banner .list_banner').animate({"left": "0"});
-            $("#section_banner button:first-child").addClass('on');
-            $("#section_banner button:first-child").siblings().removeClass('on');
-            mainRolling ++;
-        } else if (mainRolling == 2) {
-            $('#section_banner .list_banner').animate({"left": "-1100px"})
-            $("#section_banner button:nth-child(2)").addClass('on');
-            $("#section_banner button:nth-child(2)").siblings().removeClass('on');
-            mainRolling ++;
-        } else {
-            $('#section_banner .list_banner').animate({"left": "-2200px"});
-            $("#section_banner button:nth-child(3)").addClass('on');
-            $("#section_banner button:nth-child(3)").siblings().removeClass('on');
+        $panelMain.css("width", 3300 + "px");
+        $panelMain.animate({
+            "left": -itemWidthMain + "px"
+        }, function () {
+
+            // 첫번째 아이템을 마지막에 추가하기
+            $(this).append("<li class='item_banner'>" + $(this).find("li:first").html() + "</li>");
+
+            // 첫번째 아이템을 삭제하기
+            $(this).find("li:first").remove();
+
+            // 좌측 패널 수치 초기화
+            $(this).css("left", 0);
+        });
+    }
+
+    function setIndicator() {
+        if(mainRolling == 2) {
+            $($panelWrapMain).find("button:nth-child(2)").addClass('on');
+            $($panelWrapMain).find("button:nth-child(2)").siblings().removeClass('on');
+            mainRolling = 3;
+        }
+        else if(mainRolling == 3) {
+            $($panelWrapMain).find("button:nth-child(3)").addClass('on');
+            $($panelWrapMain).find("button:nth-child(3)").siblings().removeClass('on');
             mainRolling = 1;
+        }
+        else {
+            $($panelWrapMain).find("button:first").addClass('on');
+            $($panelWrapMain).find("button:first").siblings().removeClass('on');
+            mainRolling = 2;
+            
         }
     }
 

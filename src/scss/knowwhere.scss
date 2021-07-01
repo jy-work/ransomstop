@@ -192,16 +192,8 @@ nav {
             align-items: center;
             width: 1100px;
             
-            &:first-child img {
+            img {
                 margin-top: -90px;
-            }
-
-            &:nth-child(2) img {
-                margin-right: 20px;
-            }
-
-            &:nth-child(3) img {
-                margin-right: 30px;
             }
 
             .wrap_banner_text {
@@ -237,12 +229,14 @@ nav {
         text-align: center;
 
         button {
+            position: relative;
             width: 20px;
             height: 20px;
             border-radius: 50%;
             background-color: rgba(255, 255, 255, 0.8);
             vertical-align: top;
             transition: 0.5s all;
+            cursor: initial;
         }
 
         button + button {
@@ -251,6 +245,39 @@ nav {
 
         button.on {
             width: 120px;
+            border-radius: 10px;
+
+            &::after {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                
+                background-color: #58acda;
+                content: '';
+                animation-duration: 2.75s;
+                animation-name: fullBar;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+
+    @keyframes fullBar {
+        0% {
+            width: 0px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        70% {
+            border-radius: 10px 0 0 10px;
+        }
+
+        85% {
+            border-radius: 10px;
+        }
+      
+        100% {
+            width: 100%;
             border-radius: 10px;
         }
     }
